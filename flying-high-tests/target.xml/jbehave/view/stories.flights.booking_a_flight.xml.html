@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>stories.flights.booking_a_flight</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="stories/flights/booking_a_flight.story" title="Booking a flight">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">travel to my destination</inOrderTo>
+  <asA keyword="As a">traveller</asA>
+  <iWantTo keyword="I want to">be able to book a flight online</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Viewing available flights">
+<step outcome="successful">Given I want to book a flight</step>
+<step outcome="successful">When I search for <parameter>return</parameter> flights from <parameter>Sydney</parameter> to <parameter>London</parameter> in <parameter>Business</parameter></step>
+<step outcome="successful">Then I should see the list of all available flights</step>
+</scenario>
+<scenario keyword="Scenario:" title="Filtering cities">
+<step outcome="successful">Given I want to book a flight</step>
+<step outcome="successful">When I enter &apos;Se&apos; into the &apos;from&apos; city field</step>
+<step outcome="successful">Then I should see the following cities: <parameter>Seattle, Seoul</parameter></step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

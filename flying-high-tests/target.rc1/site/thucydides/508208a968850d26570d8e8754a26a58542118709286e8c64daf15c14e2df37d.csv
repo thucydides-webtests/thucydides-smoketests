@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Show featured destinations","Displaying featured destinations","ERROR","2014-06-29T03:04:54.863Z","0.0","52.64"
+"Logging on","Logging on successfully","PENDING","2014-06-29T03:09:07.351Z","0.0","0.01"
+"Logging on","Logging on successfully","SUCCESS","2014-06-29T03:04:52.344Z","0.0","0.08"
+"Show featured destinations","Viewing available flights","ERROR","2014-06-29T03:05:50.013Z","0.0","45.82"

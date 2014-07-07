@@ -1,0 +1,76 @@
+<story path="stories/earning_points/earning_points_from_special_offers.story" title="Earning Frequent Flyer points from special offers">
+<meta>
+<property keyword="@" name="earning-points" value=""/>
+<property keyword="@" name="issue" value="FH-11"/>
+<property keyword="@" name="tag" value="component:backend"/>
+</meta>
+<scenario keyword="Scenario:" title="Earning points from partner promotions">
+<step outcome="pending" keyword="PENDING">Given pending</step>
+<step outcome="pending" keyword="PENDING">When pending</step>
+<step outcome="pending" keyword="PENDING">Then pending</step>
+<pendingMethod>@Given(&quot;pending&quot;)
+@Pending
+public void givenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@When(&quot;pending&quot;)
+@Pending
+public void whenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@Then(&quot;pending&quot;)
+@Pending
+public void thenPending() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+<scenario keyword="Scenario:" title="Earning points from hotel packages">
+<step outcome="pending" keyword="PENDING">Given pending</step>
+<step outcome="pending" keyword="PENDING">When pending</step>
+<step outcome="pending" keyword="PENDING">Then pending</step>
+<pendingMethod>@Given(&quot;pending&quot;)
+@Pending
+public void givenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@When(&quot;pending&quot;)
+@Pending
+public void whenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@Then(&quot;pending&quot;)
+@Pending
+public void thenPending() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+<scenario keyword="Scenario:" title="Earning points from car rental packages">
+<step outcome="pending" keyword="PENDING">Given pending</step>
+<step outcome="pending" keyword="PENDING">When pending</step>
+<step outcome="pending" keyword="PENDING">Then pending</step>
+<pendingMethod>@Given(&quot;pending&quot;)
+@Pending
+public void givenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@When(&quot;pending&quot;)
+@Pending
+public void whenPending() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@Then(&quot;pending&quot;)
+@Pending
+public void thenPending() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+</story>

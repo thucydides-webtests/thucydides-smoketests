@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/core.css"/>
+    <link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet" />
+    <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css"/>
+
+    <!--[if IE]>
+    <script language="javascript" type="text/javascript" src="jit/Extras/excanvas.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+
+    <link type="text/css" href="jqueryui/css/start/jquery-ui-1.8.18.custom.css" rel="Stylesheet" />
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+        // Results table
+        $('#tag-list-table').dataTable( {
+            "aaSorting": [[ 1, "asc" ]],
+            "bJQueryUI": true,
+            "iDisplayLength": 25
+        } );
+    })
+    ;
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/logo.jpg" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="bluetext"><a href="index.html" class="bluetext">Home</a>  > Backend > Stories</span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div class="menu">
+    <ul>
+        <li><a href="index.html" class="current">Overall Test Results</a></li>
+        <li><a href="capabilities.html" >Requirements</a></li>
+        <li><a href="releases.html" >Releases</a></li>
+        <li><a href="0272dadd83d6e6ac748d9a947522ca78b8873f5156f9bd38d6a0eb735ee5993b.html" >Epics</a></li>
+        <li><a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html" >Stories</a></li>
+    </ul>
+    <span class="date-and-time">Report generated 29-06-2014 13:10</span>
+    <br style="clear:left"/>
+</div>
+
+
+
+   <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                <table>
+                 <tr>
+                   <td>
+                    <div><h3 id="test_list_title">Stories</h3></div>
+                    <div id="test_list_tests" class="table">
+                        <div class="test-results">
+                            <table id="tag-list-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30" class="test-results-heading">&nbsp;</th>
+                                        <th width="750" class="test-results-heading">Story</th>
+                                        <th width="70" class="test-results-heading">Tests</th>
+                                        <th width="70" class="test-results-heading">Steps</th>
+                                        <th width="65" class="test-results-heading">Stable</th>
+                                        <th width="65" class="test-results-heading">Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><h3>Earning points from status</h3></td></tr>
+
+
+                                    <tr class="test-SUCCESS">
+                                        <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="eb5445621373fc39c7bbf4a274a64404da461bb64536bd61de8cb764537b7b02.html">Earning Points From Status</a></td>
+
+                                        <td class="lightgreentext">6</td>
+                                        <td class="lightgreentext">34</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.333</td>
+                                    </tr>
+                                    <tr><td><h3>Earning Frequent Flyer points from flights</h3></td></tr>
+
+
+                                    <tr class="test-SUCCESS">
+                                        <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="8a38d79a2d56e672355463e883443b0d1bec7e59bc11b0ea485ebdd483a4c5c8.html">Earning Frequent Flyer Points From Flights</a></td>
+
+                                        <td class="lightgreentext">1</td>
+                                        <td class="lightgreentext">4</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.18</td>
+                                    </tr>
+                                    <tr><td><h3>Earning points from purchases</h3></td></tr>
+
+
+                                    <tr class="test-PENDING">
+                                        <td><img src="images/pending.png" title="PENDING" class="summary-icon"/><span style="display:none">PENDING</span></td>
+                                        <td class="PENDING-text"><a href="2e0e43a946e279ba39eba038bab5224a433adfcd2ae8e564ef21f5e3149b7075.html">Earning Points From Purchases</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">8</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.039</td>
+                                    </tr>
+                                    <tr><td><h3>Earning points from special offers</h3></td></tr>
+
+
+                                    <tr class="test-PENDING">
+                                        <td><img src="images/pending.png" title="PENDING" class="summary-icon"/><span style="display:none">PENDING</span></td>
+                                        <td class="PENDING-text"><a href="ea916188e4c2516fd4764f8512269e8fe46fcbf4e96be489e4c61cf5d3a29c80.html">Earning Points From Special Offers</a></td>
+
+                                        <td class="lightgreentext">3</td>
+                                        <td class="lightgreentext">9</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-in-progress.gif"  class="summary-icon"/>
+                                            <span style="display:none">0</span>
+                                        </td>
+                                        <td class="lightgreentext">0.044</td>
+                                    </tr>
+                                    <tr><td><h3>Earning points from status</h3></td></tr>
+
+
+                                    <tr class="test-SUCCESS">
+                                        <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="8970b4283bbee9d7775cd2d889e1339f187d5d855af31ef77f3fc65617f6da40.html">Earning Points From Status</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">30</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.153</td>
+                                    </tr>
+                                    <tr><td><h3>Earning extra points from status</h3></td></tr>
+
+
+                                    <tr class="test-SUCCESS">
+                                        <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="e53fb939a4b583eeaa1f4dc725b940c5ce929437e444da73a5d86aa39aac3edc.html">Earning Extra Points From Status</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">30</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.153</td>
+                                    </tr>
+                                    <tr><td><h3>Earning points from flights</h3></td></tr>
+
+
+                                    <tr class="test-SUCCESS">
+                                        <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="8b90dbc8c1a6b019af1d3037c831b1e625e5fe3adb55cfee94f682accb54f43c.html">Earning Points From Flights</a></td>
+
+                                        <td class="lightgreentext">1</td>
+                                        <td class="lightgreentext">4</td>
+
+                                        <td class="bluetext">
+                                            <img src="images/traffic-red.gif"  class="summary-icon"/>
+                                            <span style="display:none">1</span>
+                                        </td>
+                                        <td class="lightgreentext">0.18</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   </td>
+                  </tr>
+                 </table>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter"></div>
+
+</body>
+</html>

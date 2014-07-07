@@ -1,0 +1,56 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.error {
+    color: red;
+}
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+.featured-item {
+    padding: 4px;
+    border: 1px lavender solid;
+}
+
+.featured-item .item-title {
+    padding-left: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.featured-item .item-price {
+    font-size: 1.5em;
+    color: red;
+}

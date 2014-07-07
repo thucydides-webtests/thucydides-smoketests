@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Booking a flight","Filtering cities","SUCCESS","2014-06-11T07:30:45.704+01:00","0.0","2.21"
+"Booking a flight","Viewing available flights","SUCCESS","2014-06-11T07:30:40.484+01:00","0.0","5.22"

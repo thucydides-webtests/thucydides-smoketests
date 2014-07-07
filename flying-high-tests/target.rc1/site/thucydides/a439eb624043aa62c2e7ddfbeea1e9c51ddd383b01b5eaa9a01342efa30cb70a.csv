@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Displaying flight details","Display flight details by flight number","SUCCESS","2014-06-29T03:07:21.619Z","0.0","0.02"
+"Displaying flight details","Display international flight details by flight number","SUCCESS","2014-06-29T03:07:24.400Z","0.0","0.02"
+"Logging on","Logging on successfully","SUCCESS","2014-06-29T03:04:52.344Z","0.0","0.08"
+"Calculating status based on points","Members should get status updates based on status points earned","SUCCESS","2014-06-29T03:07:32.709Z","0.0","0.18"
+"Calculating status based on points","New members should start out as Bronze members","SUCCESS","2014-06-29T03:07:29.970Z","0.0","0.03"

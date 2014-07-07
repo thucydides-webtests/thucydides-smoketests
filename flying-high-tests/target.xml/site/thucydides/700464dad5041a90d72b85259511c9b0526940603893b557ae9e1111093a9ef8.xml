@@ -1,0 +1,35 @@
+<acceptance-test-run title="Viewing available flights" name="Viewing available flights" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="5220" timestamp="2014-06-11T07:30:40.484+01:00">
+  <user-story id="booking_a_flight" name="Booking a flight" path="stories/flights/booking_a_flight.story"/>
+  <tags>
+    <tag name="Flights" type="capability"/>
+    <tag name="Booking a flight" type="story"/>
+  </tags>
+  <test-group name="Given I want to book a flight" result="SUCCESS">
+    <screenshots>
+      <screenshot image="66621e4fd4c301df2bd7f1b8cbf31e6d_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2977">
+      <screenshots>
+        <screenshot image="66621e4fd4c301df2bd7f1b8cbf31e6d_NONE900.png"/>
+      </screenshots>
+      <description>Navigate to flight bookings</description>
+    </test-step>
+  </test-group>
+  <test-group name="When I search for {return} flights from {Sydney} to {London} in {Business}" result="SUCCESS">
+    <screenshots>
+      <screenshot image="959cde584ea244ac26e5963556600769_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="998">
+      <screenshots>
+        <screenshot image="c7943e26b8f84b17db7a6b63965d2e6b_NONE900.png"/>
+      </screenshots>
+      <description>Search for &lt;span class=&apos;step-parameter&apos;&gt;return flights from Sydney to London in Business&lt;/span&gt; class</description>
+    </test-step>
+  </test-group>
+  <test-step result="SUCCESS" duration="365">
+    <screenshots>
+      <screenshot image="959cde584ea244ac26e5963556600769_NONE900.png"/>
+    </screenshots>
+    <description>Then I should see the list of all available flights</description>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>stories.authentication.logging_on</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Logging on to the 'My Flying High' web site</h1>
+<div class="path">stories/authentication/logging_on.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@issue FH-7</div>
+<div class="property">@iteration-1 </div>
+<div class="property">@tag component:ui</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Logging on successfully</h2>
+<div class="givenStories">GivenStories:
+<div class="givenStory">given/joe_has_registered.story </div>
+</div>
+<div class="story">
+<h1>Joe registers on the site</h1>
+<div class="path">given/joe_has_registered.story</div>
+<div class="scenario">
+<h2>Scenario: Registering for the site</h2>
+<div class="step successful">Given <span class="step parameter">Joe</span> is a Frequent Flyer member</div>
+<div class="step successful">And <span class="step parameter">Joe</span> has registered online with a password of 'secret'</div>
+</div>
+</div>
+<div class="step successful">When <span class="step parameter">Joe</span> logs on with password 'secret'</div>
+<div class="step successful">Then he should be given access to the site</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Logging on with an incorrect password</h2>
+<div class="givenStories">GivenStories:
+<div class="givenStory">given/joe_has_registered.story </div>
+</div>
+<div class="story">
+<h1>Joe registers on the site</h1>
+<div class="path">given/joe_has_registered.story</div>
+<div class="scenario">
+<h2>Scenario: Registering for the site</h2>
+<div class="step successful">Given <span class="step parameter">Joe</span> is a Frequent Flyer member</div>
+<div class="step successful">And <span class="step parameter">Joe</span> has registered online with a password of 'secret'</div>
+</div>
+</div>
+<div class="step successful">When <span class="step parameter">Joe</span> logs on with password 'wrong'</div>
+<div class="step failed">Then he should be informed that his password was incorrect <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;'[expected] message'&gt; but was:&lt;'[wrong] message'&gt;</span></div>
+<pre class="failure">org.junit.ComparisonFailure: expected:&lt;'[expected] message'&gt; but was:&lt;'[wrong] message'&gt;
+	(reflection-construct)
+	at org.fest.assertions.ConstructorInvoker.newInstance(ConstructorInvoker.java:36)
+	at org.fest.assertions.ComparisonFailureFactory.newComparisonFailure(ComparisonFailureFactory.java:60)
+	at org.fest.assertions.ComparisonFailureFactory.comparisonFailure(ComparisonFailureFactory.java:46)
+	at org.fest.assertions.Fail.comparisonFailed(Fail.java:83)
+	at org.fest.assertions.Fail.failIfNotEqual(Fail.java:71)
+	at org.fest.assertions.GenericAssert.isEqualTo(GenericAssert.java:217)
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.he_should_be_informed_that_his_password_was_incorrect(LoginSteps.java:35)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: Logging on with an expired account</h2>
+<div class="givenStories">GivenStories:
+<div class="givenStory">given/joe_has_registered.story </div>
+</div>
+<div class="story">
+<h1>Joe registers on the site</h1>
+<div class="path">given/joe_has_registered.story</div>
+<div class="scenario">
+<h2>Scenario: Registering for the site</h2>
+<div class="step successful">Given <span class="step parameter">Joe</span> is a Frequent Flyer member</div>
+<div class="step successful">And <span class="step parameter">Joe</span> has registered online with a password of 'secret'</div>
+</div>
+</div>
+<div class="step failed">Given the account has expired <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.io.IOException: Database crashed</span></div>
+<div class="step notPerformed">When <span class="step parameter">Joe</span> logs on with password 'wrong' <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then he should be informed that his account has expired <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">And he should be invited to renew his account <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">java.io.IOException: Database crashed
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.the_account_has_expired(LoginSteps.java:40)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+...</pre>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

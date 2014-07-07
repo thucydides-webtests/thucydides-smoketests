@@ -1,0 +1,44 @@
+{
+  "name" : "New members should start out as Bronze members",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "Given {Jill} {Smith} is not a Frequent Flyer member",
+    "duration" : 2,
+    "startTime" : 1404011249978,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 2,
+    "description" : "When she registers on the Frequent Flyer program",
+    "duration" : 2,
+    "startTime" : 1404011249980,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 3,
+    "description" : "Then she should have a status of {Bronze}",
+    "duration" : 13,
+    "startTime" : 1404011249982,
+    "result" : "SUCCESS"
+  } ],
+  "userStory" : {
+    "id" : "calculating_status_based_on_points",
+    "storyName" : "Calculating status based on points",
+    "path" : "stories/status/calculating_status_based_on_points.story"
+  },
+  "title" : "New members should start out as Bronze members",
+  "issues" : [ "FH-17" ],
+  "additionalIssues" : [ "FH-17" ],
+  "tags" : [ {
+    "name" : "Calculating status based on points",
+    "type" : "story"
+  }, {
+    "name" : "ui",
+    "type" : "component"
+  }, {
+    "name" : "Earning Points",
+    "type" : "Epic"
+  } ],
+  "startTime" : 1404011249970,
+  "duration" : 28,
+  "manual" : false,
+  "result" : "SUCCESS"
+}

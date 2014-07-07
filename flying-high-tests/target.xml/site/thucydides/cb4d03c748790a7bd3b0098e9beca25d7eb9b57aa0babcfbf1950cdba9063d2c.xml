@@ -1,0 +1,22 @@
+<acceptance-test-run title="Earning points from purchases with partners" name="Earning points from purchases with partners" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="32" timestamp="2014-06-11T07:30:40.013+01:00">
+  <user-story id="earning_points_from_purchases" name="Earning points from purchases" path="stories/earning_points/earning_points_from_purchases.story"/>
+  <tags>
+    <tag name="Earning points" type="capability"/>
+    <tag name="Earning points from purchases" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="2">
+    <description>Given we can earn points with partners</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2">
+    <description>And the flying distance between {Sydney} and {Melbourne} is {878} km</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3">
+    <description>And I am a {Bronze} Frequent Flyer member</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3">
+    <description>When I fly from {Sydney} to {Melbourne} on {10/10/2014}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4">
+    <description>Then I should earn {439} points</description>
+  </test-step>
+</acceptance-test-run>

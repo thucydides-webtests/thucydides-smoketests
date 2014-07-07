@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Stories</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/core.css"/>
+    <link rel="stylesheet" href="css/link.css"/>
+
+    <link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet" />
+    <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css"/>
+
+    <!--[if IE]>
+    <script language="javascript" type="text/javascript" src="jit/Extras/excanvas.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+
+    <link type="text/css" href="jqueryui/css/start/jquery-ui-1.8.18.custom.css" rel="Stylesheet"/>
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+        // Results table
+        $('#req-results-table').dataTable({
+            "aaSorting": [
+                [ 2, "asc" ]
+            ],
+            "bJQueryUI": true,
+            "iDisplayLength": 25
+        });
+        $('#test-results-table').dataTable({
+            "aaSorting": [
+                [ 2, "asc" ]
+            ],
+            "bJQueryUI": true,
+            "iDisplayLength": 25
+        });
+        $('#examples-table').dataTable({
+            "aaSorting": [
+                [ 2, "asc" ]
+            ],
+            "bJQueryUI": true,
+            "iDisplayLength": 25
+        });
+        $("#tabs").tabs();
+        $("#test-tabs").tabs();
+    })
+    ;
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/logo.jpg" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+<div id="contenttop">
+    <div class="middlebg">
+        <span class="bluetext"><a href="index.html" class="bluetext">Home</a> > Requirements > Stories </span>
+    </div>
+    <div class="rightbg"></div>
+</div>
+
+<div class="clr"></div>
+
+<!--/* starts second table*/-->
+<div class="menu">
+    <ul>
+        <li><a href="index.html" >Overall Test Results</a></li>
+        <li><a href="capabilities.html" >Requirements</a></li>
+        <li><a href="releases.html" >Releases</a></li>
+        <li><a href="0272dadd83d6e6ac748d9a947522ca78b8873f5156f9bd38d6a0eb735ee5993b.html" >Epics</a></li>
+        <li><a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html" class="current">Stories</a></li>
+    </ul>
+    <span class="date-and-time">Report generated 29-06-2014 13:10</span>
+    <br style="clear:left"/>
+</div>
+
+<div class="clr"></div>
+
+<div id="beforetable"></div>
+<div id="results-dashboard">
+<div class="middlb">
+<div class="table">
+
+    <div id="tabs">
+            <ul>
+                    <li><a href="#tabs-1">
+                    Stories (15)
+                    </a></li>
+            </ul>
+            <div id="tabs-1" class="capabilities-table">
+                <div id="req_list_tests" class="table">
+                    <div class="test-results">
+                        <table id="req-results-table">
+                            <thead>
+                            <tr>
+                                <th width="30" class="test-results-heading">&nbsp;</th>
+                                <th width="65" class="test-results-heading">ID</th>
+                                <th width="525" class="test-results-heading">Story</th>
+                                <th class="test-results-heading" width="75px">Auto.<br/>Tests</th>
+                                <th class="test-results-heading" width="25px"><i class="icon-check icon-large"
+                                                                                 title="Tests passed (automated)"></i>
+                                </th>
+                                <th class="test-results-heading" width="25px"><i class="icon-ban-circle icon-large"
+                                                                                 title="Tests skipped or pending (automated)">
+                                </th>
+                                <th class="test-results-heading" width="25px"><i class="icon-thumbs-down icon-large"
+                                                                                 title="Tests failed (automated)"></th>
+                                <th class="test-results-heading" width="25px"><i
+                                        class="icon-exclamation-sign icon-large"
+                                        title="Tests failed with an error (automated)"></th>
+                                    <th class="test-results-heading" width="75px">Manual<br/>Tests</th>
+                                    <th class="test-results-heading" width="25px"><i class="icon-check icon-large"
+                                                                                     title="Tests passed (manual)"></i>
+                                    </th>
+                                    <th class="test-results-heading" width="25px"><i class="icon-ban-circle icon-large"
+                                                                                     title="Tests skipped or pending (manual)">
+                                    </th>
+                                    <th class="test-results-heading" width="25px"><i class="icon-thumbs-down icon-large"
+                                                                                     title="Tests failed (manual)"></th>
+                                    <th class="test-results-heading" width="25px"><i
+                                            class="icon-exclamation-sign icon-large"
+                                            title="Tests failed with an error (manual)"></th>
+
+
+                                <th width="125px" class="test-results-heading">Coverage</th>
+                            </tr>
+                            <tbody>
+
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-13">FH-13</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="3ff040b93397e91c8c5d9badffaadb50c2aa20b5af9c61f359481507b45a334f.html">Registering online</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>Users need to be able to register online with a minimum of effort. See <a href="http://www.wakaleo.com" class="external-link" rel="nofollow">this study</a> for details about the corresponding marketing study.</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">0</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Registering online
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Registering online
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Registering online
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Registering online
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Registering online
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-green.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">3</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-18">FH-18</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="b2a338e5bd4841b2f2cabd724dcdb8c7bfd5988dfd6e4bb067cccb1d7c5f8e28.html">Displaying flight details</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                                    <td class="greentext requirementRowCell">2</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">100%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Displaying flight details
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Displaying flight details
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Displaying flight details
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 125px;"
+                                                                     title="Displaying flight details
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 125px;"
+                                                                         title="Displaying flight details
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-PENDING requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="PENDING"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-11">FH-11</a></td>
+
+                                    <td class="PENDING-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="a3e327b7530071b614b64a797dbb6928460922efdac947a227e0c9a5a74cbdef.html">Earning points from special offers</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">3</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">3</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Earning points from special offers
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 3
+  - Pending tests: 3 (100% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 100%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Earning points from special offers
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 3
+  - Pending tests: 3 (100% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 100%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Earning points from special offers
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 3
+  - Pending tests: 3 (100% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 100%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Earning points from special offers
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 3
+  - Pending tests: 3 (100% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 100%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Earning points from special offers
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 3
+  - Pending tests: 3 (100% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 100%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-ERROR requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-orange.gif" class="summary-icon"
+                                             title="ERROR"/>
+                                        <span style="display:none">1</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-7">FH-7</a></td>
+
+                                    <td class="ERROR-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="e652009a1bad783be66314b2a1289533d094b25c8f571849c00700765b5a72fb.html">Logging on</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">3</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">1</td>
+                                    <td class="lightorangetext requirementRowCell">2</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Logging on
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 1 (33.3% of specified requirements)
+  - Tests with errors: 2 (66.7% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Logging on
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 1 (33.3% of specified requirements)
+  - Tests with errors: 2 (66.7% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Logging on
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 1 (33.3% of specified requirements)
+  - Tests with errors: 2 (66.7% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 42px;"
+                                                                     title="Logging on
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 1 (33.3% of specified requirements)
+  - Tests with errors: 2 (66.7% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Logging on
+Tests implemented: 3
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 1 (33.3% of specified requirements)
+  - Tests with errors: 2 (66.7% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-9">FH-9</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="e3a322aaf680d1511615722e8c9692d80ac8f8f5140ff6bb52824eebeff80a0b.html">Logging on using Facebook</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">0</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Logging on using Facebook
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Logging on using Facebook
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Logging on using Facebook
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Logging on using Facebook
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Logging on using Facebook
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-green.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">3</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-1">FH-1</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="998dee50a802690c1ce362a7568b86011e2de8915da69417c2191ca558690831.html">Earning Frequent Flyer points from flights</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>In order to encourage travellers to book with Flying High Airlines more frequently<br/>
+As the Flying High sales manager<br/>
+I want travellers to earn Frequent Flyer points when they fly with us</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                                    <td class="greentext requirementRowCell">2</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">100%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Earning Frequent Flyer points from flights
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Earning Frequent Flyer points from flights
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Earning Frequent Flyer points from flights
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 125px;"
+                                                                     title="Earning Frequent Flyer points from flights
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 125px;"
+                                                                         title="Earning Frequent Flyer points from flights
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-16">FH-16</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="49d5c547adffb64e110fa6f2908313619b981c8986a4b5233761d0a0bf9c5dc9.html">Show Featured Destinations</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>In order to encourage travellers to travel more<br/>
+As an airline<br/>
+I want to show travellers exciting destinations when they log on</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">0</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Show Featured Destinations
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Show Featured Destinations
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Show Featured Destinations
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Show Featured Destinations
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Show Featured Destinations
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-PENDING requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="PENDING"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-22">FH-22</a></td>
+
+                                    <td class="PENDING-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="eeb63b09594eabc1b370dd43035063ac5704381eab47335881873075179572cd.html">Logging on</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>Logging on to admin</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">3</td>
+                                    <td class="greentext requirementRowCell">2</td>
+                                    <td class="bluetext requirementRowCell">1</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">66.7%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Logging on
+Tests implemented: 3
+  - Passing tests: 2 (66.7% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (33.3% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 33.3%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 83px;"
+                                                             title="Logging on
+Tests implemented: 3
+  - Passing tests: 2 (66.7% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (33.3% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 33.3%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 83px;"
+                                                                 title="Logging on
+Tests implemented: 3
+  - Passing tests: 2 (66.7% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (33.3% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 33.3%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 83px;"
+                                                                     title="Logging on
+Tests implemented: 3
+  - Passing tests: 2 (66.7% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (33.3% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 33.3%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 83px;"
+                                                                         title="Logging on
+Tests implemented: 3
+  - Passing tests: 2 (66.7% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (33.3% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 33.3%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-ERROR requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-orange.gif" class="summary-icon"
+                                             title="ERROR"/>
+                                        <span style="display:none">1</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-21">FH-21</a></td>
+
+                                    <td class="ERROR-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="14d47a34da1bb97cde59493a85806be1bb72a1f1d18bd77cafacf27c47ce5891.html">Show featured destinations</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>Show featured destinations</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">2</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Show featured destinations
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Show featured destinations
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Show featured destinations
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Show featured destinations
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Show featured destinations
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-green.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">3</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-17">FH-17</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="0f4b18fdb165dc773d87cca73b67c29b6108302013abd89ee87f5464a8d7392e.html">Calculating status based on points</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>As a Frequent Flyer member<br/>
+I want my status to be upgraded as soon as I earn enough points<br/>
+So that I can benefit from my higher status sooner</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">11</td>
+                                    <td class="greentext requirementRowCell">11</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">100%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Calculating status based on points
+Tests implemented: 11
+  - Passing tests: 11 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Calculating status based on points
+Tests implemented: 11
+  - Passing tests: 11 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Calculating status based on points
+Tests implemented: 11
+  - Passing tests: 11 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 125px;"
+                                                                     title="Calculating status based on points
+Tests implemented: 11
+  - Passing tests: 11 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 125px;"
+                                                                         title="Calculating status based on points
+Tests implemented: 11
+  - Passing tests: 11 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-ERROR requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-orange.gif" class="summary-icon"
+                                             title="ERROR"/>
+                                        <span style="display:none">1</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-15">FH-15</a></td>
+
+                                    <td class="ERROR-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="84d92f4178ea467536a398eec5765cef3d8dfd635b2a2b3c5f3f15c26ffa1c05.html">Booking a flight</a></span>
+
+                                        <div class="requirementNarrative read-more-text"><p>In order to travel to my destination<br/>
+As a traveller<br/>
+I want to be able to book a flight online</p></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">2</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Booking a flight
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Booking a flight
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Booking a flight
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Booking a flight
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Booking a flight
+Tests implemented: 2
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 2 (100% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-PENDING requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="PENDING"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-10">FH-10</a></td>
+
+                                    <td class="PENDING-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="4e7f43edf980260bb23209fe545af33f2d6989b6dadfb2046aa2d91f1408ef3b.html">Earning points from purchases</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                                    <td class="greentext requirementRowCell">1</td>
+                                    <td class="bluetext requirementRowCell">1</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">50%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Earning points from purchases
+Tests implemented: 2
+  - Passing tests: 1 (50% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (50% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 50%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 62px;"
+                                                             title="Earning points from purchases
+Tests implemented: 2
+  - Passing tests: 1 (50% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (50% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 50%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 62px;"
+                                                                 title="Earning points from purchases
+Tests implemented: 2
+  - Passing tests: 1 (50% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (50% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 50%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 62px;"
+                                                                     title="Earning points from purchases
+Tests implemented: 2
+  - Passing tests: 1 (50% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (50% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 50%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 62px;"
+                                                                         title="Earning points from purchases
+Tests implemented: 2
+  - Passing tests: 1 (50% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 1
+  - Pending tests: 1 (50% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 50%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-green.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">3</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-12">FH-12</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="f0f732f8c345a32e375df7f450101ec060a428613d2a450e3bde8889e1fd8668.html">Earning points from status</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">5</td>
+                                    <td class="greentext requirementRowCell">5</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">100%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Earning points from status
+Tests implemented: 5
+  - Passing tests: 5 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 125px;"
+                                                             title="Earning points from status
+Tests implemented: 5
+  - Passing tests: 5 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 125px;"
+                                                                 title="Earning points from status
+Tests implemented: 5
+  - Passing tests: 5 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 125px;"
+                                                                     title="Earning points from status
+Tests implemented: 5
+  - Passing tests: 5 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 125px;"
+                                                                         title="Earning points from status
+Tests implemented: 5
+  - Passing tests: 5 (100% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 0
+
+
+Estimated unimplemented tests: 0
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-14">FH-14</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="2db2c87cd659d81fcea721f1d35c0b2989c88212b6241c4ca46aa81f01fd935c.html">Transferring points to other members</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">0</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Transferring points to other members
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Transferring points to other members
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Transferring points to other members
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Transferring points to other members
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Transferring points to other members
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="test-SUCCESS requirementRow">
+                                    <td class="requirementRowCell">
+                                        <img src="images/traffic-yellow.gif" class="summary-icon"
+                                             title="SUCCESS"/>
+                                        <span style="display:none">0</span>
+                                    </td>
+                                    <td class="cardNumber requirementRowCell"><a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-8">FH-8</a></td>
+
+                                    <td class="SUCCESS-text requirementRowCell">
+                                        <a href="javaScript:void(0)" class="read-more-link"><img src="images/plus.png"
+                                                                                                 height="20"/></a>
+                                        <span class="requirementName"><a
+                                                href="dff1df2837819b3bf033330881b7c186e0fdf523261ae31120f27abd76b1bd87.html">Logging on using GMail</a></span>
+
+                                        <div class="requirementNarrative read-more-text"></div>
+                                    </td>
+
+
+
+                                    <td class="greentext highlighted-value requirementRowCell">0</td>
+                                    <td class="greentext requirementRowCell">0</td>
+                                    <td class="bluetext requirementRowCell">0</td>
+                                    <td class="redtext requirementRowCell">0</td>
+                                    <td class="lightorangetext requirementRowCell">0</td>
+                                        <td class="greentext highlighted-value requirementRowCell">0</td>
+                                        <td class="greentext requirementRowCell">0</td>
+                                        <td class="bluetext requirementRowCell">0</td>
+                                        <td class="redtext requirementRowCell">0</td>
+                                        <td class="lightorangetext requirementRowCell">0</td>
+
+                                    <td width="125px" class="lightgreentext requirementRowCell">
+
+                                        <!--
+                                        Accessing the ESAA Registration screens
+
+                                        Tests implemented: 10
+                                          - Passing tests: 4
+                                          - Failing tests: 3
+
+                                        Requirements specified:   6
+                                        Requiments without tests: 2
+
+                                        Estimated unimplemented tests: 7
+                                        -->
+
+                                        <table>
+                                            <tr>
+                                                <td width="40px">
+                                                    <div class="small">0%</div>
+                                                </td>
+                                                <td width="125px">
+                                                    <div class="percentagebar"
+                                                         title="Logging on using GMail
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%"
+                                                         style="width: 125px;">
+                                                        <div class="ignoredbar"
+                                                             style="width: 0px;"
+                                                             title="Logging on using GMail
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                            <div class="errorbar"
+                                                                 style="width: 0px;"
+                                                                 title="Logging on using GMail
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                <div class="failingbar"
+                                                                     style="width: 0px;"
+                                                                     title="Logging on using GMail
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    <div class="passingbar"
+                                                                         style="width: 0px;"
+                                                                         title="Logging on using GMail
+Tests implemented: 0
+  - Passing tests: 0 (0% of specified requirements)
+  - Failing tests: 0 (0% of specified requirements)
+  - Tests with errors: 0 (0% of specified requirements)
+
+Tests not implemented or not executed: 0
+  - Pending tests: 0 (0% of specified requirements)
+  - Ignored or skipped tests: 0 (0% of specified requirements)
+
+Requirements specified:     1
+Requirements with no tests: 1
+
+
+Estimated unimplemented tests: 4
+Estimated unimplemented or pending requirements: 0%
+Estimated ignored or skipped requirements: 0%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Thucydides version 0.9.255-SNAPSHOT - Build UNKNOWN</span>
+</div>
+
+
+</body>
+</html>

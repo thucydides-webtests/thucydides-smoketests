@@ -1,0 +1,34 @@
+<story path="stories/authentication/user_authentication.story" title="User Authentication">
+<meta>
+<property keyword="@" name="issue" value="FH-7"/>
+<property keyword="@" name="tag" value="component:ui"/>
+</meta>
+<scenario keyword="Scenario:" title="Successful authentication">
+<step outcome="successful">Given <parameter>Jane</parameter> is a registered Frequent Flyer</step>
+<step outcome="failed" keyword="FAILED">When <parameter>Jane</parameter> authenticates with a valid email address and password<failure>net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then <parameter>Jane</parameter> should be given access to her account</step>
+<failure>net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps.enterEmailAndPasswordFor(AuthenticationFlowSteps.java:17)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.CGLIB$enterEmailAndPasswordFor$1(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd$$FastClassByCGLIB$$e74f7a86.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.enterEmailAndPasswordFor(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps.whenJaneAuthenticatesWithAValidEmailAddressAndPassword(UserAuthenticationSteps.java:21)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+...</failure>
+</scenario>
+</story>

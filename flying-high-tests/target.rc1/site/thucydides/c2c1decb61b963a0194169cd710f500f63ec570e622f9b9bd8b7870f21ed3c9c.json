@@ -1,0 +1,370 @@
+{
+  "name" : "Members should get status updates based on status points earned",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "[1] {initialStatus=Bronze, initialStatusPoints=0, extraPoints=300, finalStatus=Silver}",
+    "duration" : 18,
+    "startTime" : 1404011252712,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 2,
+      "description" : "Given a member has a status of {Bronze}",
+      "duration" : 2,
+      "startTime" : 1404011252719,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 3,
+      "description" : "And he has {0} status points",
+      "duration" : 1,
+      "startTime" : 1404011252721,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 4,
+      "description" : "When he earns {300} extra status points",
+      "duration" : 3,
+      "startTime" : 1404011252722,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 5,
+      "description" : "Then he should have a status of {Silver}",
+      "duration" : 1,
+      "startTime" : 1404011252725,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 6,
+    "description" : "[2] {initialStatus=Silver, initialStatusPoints=0, extraPoints=700, finalStatus=Gold}",
+    "duration" : 20,
+    "startTime" : 1404011252730,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 7,
+      "description" : "Given a member has a status of {Silver}",
+      "duration" : 2,
+      "startTime" : 1404011252740,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 8,
+      "description" : "And he has {0} status points",
+      "duration" : 1,
+      "startTime" : 1404011252742,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 9,
+      "description" : "When he earns {700} extra status points",
+      "duration" : 2,
+      "startTime" : 1404011252743,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 10,
+      "description" : "Then he should have a status of {Gold}",
+      "duration" : 2,
+      "startTime" : 1404011252745,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 11,
+    "description" : "[3] {initialStatus=Gold, initialStatusPoints=0, extraPoints=1500, finalStatus=Platinum}",
+    "duration" : 20,
+    "startTime" : 1404011252750,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 12,
+      "description" : "Given a member has a status of {Gold}",
+      "duration" : 2,
+      "startTime" : 1404011252756,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 13,
+      "description" : "And he has {0} status points",
+      "duration" : 1,
+      "startTime" : 1404011252758,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 14,
+      "description" : "When he earns {1500} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252760,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 15,
+      "description" : "Then he should have a status of {Platinum}",
+      "duration" : 1,
+      "startTime" : 1404011252761,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 16,
+    "description" : "[4] {initialStatus=Bronze, initialStatusPoints=200, extraPoints=99, finalStatus=Bronze}",
+    "duration" : 15,
+    "startTime" : 1404011252770,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 17,
+      "description" : "Given a member has a status of {Bronze}",
+      "duration" : 2,
+      "startTime" : 1404011252776,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 18,
+      "description" : "And he has {200} status points",
+      "duration" : 1,
+      "startTime" : 1404011252778,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 19,
+      "description" : "When he earns {99} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252779,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 20,
+      "description" : "Then he should have a status of {Bronze}",
+      "duration" : 1,
+      "startTime" : 1404011252780,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 21,
+    "description" : "[5] {initialStatus=Bronze, initialStatusPoints=200, extraPoints=100, finalStatus=Silver}",
+    "duration" : 16,
+    "startTime" : 1404011252785,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 22,
+      "description" : "Given a member has a status of {Bronze}",
+      "duration" : 1,
+      "startTime" : 1404011252792,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 23,
+      "description" : "And he has {200} status points",
+      "duration" : 1,
+      "startTime" : 1404011252794,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 24,
+      "description" : "When he earns {100} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252795,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 25,
+      "description" : "Then he should have a status of {Silver}",
+      "duration" : 1,
+      "startTime" : 1404011252797,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 26,
+    "description" : "[6] {initialStatus=Silver, initialStatusPoints=600, extraPoints=99, finalStatus=Silver}",
+    "duration" : 19,
+    "startTime" : 1404011252801,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 27,
+      "description" : "Given a member has a status of {Silver}",
+      "duration" : 2,
+      "startTime" : 1404011252808,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 28,
+      "description" : "And he has {600} status points",
+      "duration" : 2,
+      "startTime" : 1404011252810,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 29,
+      "description" : "When he earns {99} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252812,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 30,
+      "description" : "Then he should have a status of {Silver}",
+      "duration" : 2,
+      "startTime" : 1404011252813,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 31,
+    "description" : "[7] {initialStatus=Silver, initialStatusPoints=600, extraPoints=100, finalStatus=Gold}",
+    "duration" : 17,
+    "startTime" : 1404011252820,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 32,
+      "description" : "Given a member has a status of {Silver}",
+      "duration" : 2,
+      "startTime" : 1404011252827,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 33,
+      "description" : "And he has {600} status points",
+      "duration" : 2,
+      "startTime" : 1404011252829,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 34,
+      "description" : "When he earns {100} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252831,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 35,
+      "description" : "Then he should have a status of {Gold}",
+      "duration" : 2,
+      "startTime" : 1404011252832,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 36,
+    "description" : "[8] {initialStatus=Gold, initialStatusPoints=1400, extraPoints=99, finalStatus=Gold}",
+    "duration" : 16,
+    "startTime" : 1404011252837,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 37,
+      "description" : "Given a member has a status of {Gold}",
+      "duration" : 1,
+      "startTime" : 1404011252844,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 38,
+      "description" : "And he has {1400} status points",
+      "duration" : 2,
+      "startTime" : 1404011252845,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 39,
+      "description" : "When he earns {99} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252847,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 40,
+      "description" : "Then he should have a status of {Gold}",
+      "duration" : 1,
+      "startTime" : 1404011252848,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 41,
+    "description" : "[9] {initialStatus=Gold, initialStatusPoints=1400, extraPoints=100, finalStatus=Platinum}",
+    "duration" : 17,
+    "startTime" : 1404011252853,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 42,
+      "description" : "Given a member has a status of {Gold}",
+      "duration" : 1,
+      "startTime" : 1404011252860,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 43,
+      "description" : "And he has {1400} status points",
+      "duration" : 1,
+      "startTime" : 1404011252862,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 44,
+      "description" : "When he earns {100} extra status points",
+      "duration" : 2,
+      "startTime" : 1404011252863,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 45,
+      "description" : "Then he should have a status of {Platinum}",
+      "duration" : 2,
+      "startTime" : 1404011252865,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 46,
+    "description" : "[10] {initialStatus=Platinum, initialStatusPoints=2000, extraPoints=100, finalStatus=Platinum}",
+    "duration" : 20,
+    "startTime" : 1404011252870,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 47,
+      "description" : "Given a member has a status of {Platinum}",
+      "duration" : 1,
+      "startTime" : 1404011252879,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 48,
+      "description" : "And he has {2000} status points",
+      "duration" : 1,
+      "startTime" : 1404011252881,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 49,
+      "description" : "When he earns {100} extra status points",
+      "duration" : 1,
+      "startTime" : 1404011252882,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 50,
+      "description" : "Then he should have a status of {Platinum}",
+      "duration" : 2,
+      "startTime" : 1404011252883,
+      "result" : "SUCCESS"
+    } ]
+  } ],
+  "userStory" : {
+    "id" : "calculating_status_based_on_points",
+    "storyName" : "Calculating status based on points",
+    "path" : "stories/status/calculating_status_based_on_points.story"
+  },
+  "title" : "Members should get status updates based on status points earned",
+  "issues" : [ "FH-17" ],
+  "additionalIssues" : [ "FH-17" ],
+  "tags" : [ {
+    "name" : "Calculating status based on points",
+    "type" : "story"
+  }, {
+    "name" : "ui",
+    "type" : "component"
+  }, {
+    "name" : "Earning Points",
+    "type" : "Epic"
+  } ],
+  "startTime" : 1404011252709,
+  "duration" : 182,
+  "dataTable" : {
+    "headers" : [ "initialStatus", "initialStatusPoints", "extraPoints", "finalStatus" ],
+    "rows" : [ {
+      "values" : [ "Bronze", "0", "300", "Silver" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Silver", "0", "700", "Gold" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Gold", "0", "1500", "Platinum" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Bronze", "200", "99", "Bronze" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Bronze", "200", "100", "Silver" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Silver", "600", "99", "Silver" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Silver", "600", "100", "Gold" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Gold", "1400", "99", "Gold" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Gold", "1400", "100", "Platinum" ],
+      "result" : "SUCCESS"
+    }, {
+      "values" : [ "Platinum", "2000", "100", "Platinum" ],
+      "result" : "SUCCESS"
+    } ]
+  },
+  "manual" : false,
+  "result" : "SUCCESS"
+}

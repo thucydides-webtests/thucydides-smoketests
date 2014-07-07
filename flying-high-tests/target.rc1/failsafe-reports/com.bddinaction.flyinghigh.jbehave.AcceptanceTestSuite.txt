@@ -1,0 +1,725 @@
+-------------------------------------------------------------------------------
+Test set: com.bddinaction.flyinghigh.jbehave.AcceptanceTestSuite
+-------------------------------------------------------------------------------
+Tests run: 147, Failures: 1, Errors: 6, Skipped: 28, Time elapsed: 310.015 sec <<< FAILURE!
+Then he should be informed that his password was incorrect(com.bddinaction.flyinghigh.jbehave.steps.LoginSteps)  Time elapsed: 0.02 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<'[expected] message'> but was:<'[wrong] message'>
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.fest.assertions.ConstructorInvoker.newInstance(ConstructorInvoker.java:36)
+	at org.fest.assertions.ComparisonFailureFactory.newComparisonFailure(ComparisonFailureFactory.java:60)
+	at org.fest.assertions.ComparisonFailureFactory.comparisonFailure(ComparisonFailureFactory.java:46)
+	at org.fest.assertions.Fail.comparisonFailed(Fail.java:83)
+	at org.fest.assertions.Fail.failIfNotEqual(Fail.java:71)
+	at org.fest.assertions.GenericAssert.isEqualTo(GenericAssert.java:217)
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.he_should_be_informed_that_his_password_was_incorrect(LoginSteps.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Given the account has expired(com.bddinaction.flyinghigh.jbehave.steps.LoginSteps)  Time elapsed: 0.002 sec  <<< ERROR!
+java.io.IOException: Database crashed
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.the_account_has_expired(LoginSteps.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Given Jane has logged on(com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps)  Time elapsed: 52.625 sec  <<< ERROR!
+net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps.enterEmailAndPasswordFor(AuthenticationFlowSteps.java:17)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.CGLIB$enterEmailAndPasswordFor$1(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd$$FastClassByCGLIB$$e74f7a86.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.enterEmailAndPasswordFor(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps.aUserHasLoggedOnAs(UserAuthenticationSteps.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:192)
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:88)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011101000,"rdfTime":1404011101000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.8.0'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:251)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:195)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:107)
+	at net.thucydides.core.webdriver.WebdriverInstanceFactory.newFirefoxDriver(WebdriverInstanceFactory.java:32)
+	at net.thucydides.core.webdriver.WebDriverFactory.firefoxDriver(WebDriverFactory.java:535)
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:169)
+	... 36 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011101000,"rdfTime":1404011101000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6778675275547258210webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 44 more
+Given I want to book a flight(com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps)  Time elapsed: 45.804 sec  <<< ERROR!
+net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps.navigateToFlightBookings(TravellerFlowSteps.java:18)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.CGLIB$navigateToFlightBookings$0(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e$$FastClassByCGLIB$$7446f886.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.navigateToFlightBookings(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps.givenIWantToBookAFlight(BookingAFlightSteps.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:192)
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:88)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011150000,"rdfTime":1404011150000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.8.0'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:251)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:195)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:107)
+	at net.thucydides.core.webdriver.WebdriverInstanceFactory.newFirefoxDriver(WebdriverInstanceFactory.java:32)
+	at net.thucydides.core.webdriver.WebDriverFactory.firefoxDriver(WebDriverFactory.java:535)
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:169)
+	... 36 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011150000,"rdfTime":1404011150000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3289356048381574557webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 44 more
+When Jane authenticates with a valid email address and password(com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps)  Time elapsed: 45.742 sec  <<< ERROR!
+net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps.enterEmailAndPasswordFor(AuthenticationFlowSteps.java:17)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.CGLIB$enterEmailAndPasswordFor$1(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd$$FastClassByCGLIB$$e74f7a86.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.enterEmailAndPasswordFor(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps.whenJaneAuthenticatesWithAValidEmailAddressAndPassword(UserAuthenticationSteps.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:192)
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:88)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011195000,"rdfTime":1404011195000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.8.0'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:251)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:195)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:107)
+	at net.thucydides.core.webdriver.WebdriverInstanceFactory.newFirefoxDriver(WebdriverInstanceFactory.java:32)
+	at net.thucydides.core.webdriver.WebDriverFactory.firefoxDriver(WebDriverFactory.java:535)
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:169)
+	... 36 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011195000,"rdfTime":1404011195000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous6044904989855545963webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 44 more
+Given I want to book a flight\u200B(com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps)  Time elapsed: 45.923 sec  <<< ERROR!
+net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps.navigateToFlightBookings(TravellerFlowSteps.java:18)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.CGLIB$navigateToFlightBookings$0(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e$$FastClassByCGLIB$$7446f886.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.navigateToFlightBookings(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps.givenIWantToBookAFlight(BookingAFlightSteps.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:192)
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:88)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011253000,"rdfTime":1404011252000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.8.0'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:251)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:195)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:107)
+	at net.thucydides.core.webdriver.WebdriverInstanceFactory.newFirefoxDriver(WebdriverInstanceFactory.java:32)
+	at net.thucydides.core.webdriver.WebDriverFactory.firefoxDriver(WebDriverFactory.java:535)
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:169)
+	... 36 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011253000,"rdfTime":1404011252000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3958762082781677390webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 44 more
+Given I want to book a flight\u200B\u200B(com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps)  Time elapsed: 45.866 sec  <<< ERROR!
+net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps.navigateToFlightBookings(TravellerFlowSteps.java:18)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.CGLIB$navigateToFlightBookings$0(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e$$FastClassByCGLIB$$7446f886.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.navigateToFlightBookings(<generated>)
+	at com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps.givenIWantToBookAFlight(BookingAFlightSteps.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:192)
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:88)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011301000,"rdfTime":1404011301000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.8.0'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:251)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:195)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:107)
+	at net.thucydides.core.webdriver.WebdriverInstanceFactory.newFirefoxDriver(WebdriverInstanceFactory.java:32)
+	at net.thucydides.core.webdriver.WebDriverFactory.firefoxDriver(WebDriverFactory.java:535)
+	at net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:169)
+	... 36 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: Directory state JSON differs: cache [] state [{"name":"app-global","addons":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"descriptor":"/Applications/Firefox.app/Contents/MacOS/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","mtime":1399678055000,"rdfTime":1399678054000}}},{"name":"app-profile","addons":{"fxdriver@googlecode.com":{"descriptor":"/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/fxdriver@googlecode.com","mtime":1404011301000,"rdfTime":1404011301000}}}]
+*** LOG addons.xpi-utils: Opening XPI database /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions.json
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+*** LOG addons.xpi-utils: Make addon app-profile:fxdriver@googlecode.com visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi-utils: Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG DeferredSave/extensions.json: Save changes
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG DeferredSave/extensions.json: Starting timer
+*** LOG DeferredSave/extensions.json: Starting write
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG DeferredSave/extensions.json: Write succeeded
+*** LOG addons.xpi-utils: XPI Database saved, setting schema version preference to 16
+*** LOG addons.xpi: Notifying XPI shutdown observers
+*** LOG addons.manager: Async provider shutdown done
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+System JS : ERROR resource://app/components/nsBrowserGlue.js:1665 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIAnnotationService.getItemsWithAnnotation]
+System JS : ERROR resource://gre/modules/BookmarkHTMLUtils.jsm:798 - NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: /var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/anonymous3460745706779010844webdriver-profile/extensions/webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 44 more

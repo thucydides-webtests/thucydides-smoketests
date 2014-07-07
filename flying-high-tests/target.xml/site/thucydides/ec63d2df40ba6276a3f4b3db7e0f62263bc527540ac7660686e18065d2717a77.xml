@@ -1,0 +1,36 @@
+<acceptance-test-run title="Displaying featured destinations" name="Displaying featured destinations" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="9843" timestamp="2014-06-11T07:30:23.427+01:00">
+  <user-story id="show_featured_destinations" name="Show featured destinations" path="stories/marketing/show_featured_destinations.story"/>
+  <tags>
+    <tag name="Marketing" type="capability"/>
+    <tag name="Show featured destinations" type="story"/>
+  </tags>
+  <test-group name="Given {Jane} has logged on" result="SUCCESS">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="4783">
+      <screenshots>
+        <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+      </screenshots>
+      <description>Enter email and password for: &lt;span class=&apos;step-parameter&apos;&gt;Jane&lt;/span&gt;</description>
+    </test-step>
+  </test-group>
+  <test-step result="SUCCESS" duration="792">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <description>When Jane views the home page</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1146">
+    <screenshots>
+      <screenshot image="275228acadd3ec63d8a6fbadaca9539b_NONE900.png"/>
+    </screenshots>
+    <description>Then she should see {3} featured destinations</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="821">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <description>And the featured destinations should include {Singapore} costing {900}</description>
+  </test-step>
+</acceptance-test-run>

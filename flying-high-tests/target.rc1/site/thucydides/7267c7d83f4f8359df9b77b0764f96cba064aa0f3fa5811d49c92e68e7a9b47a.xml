@@ -1,0 +1,20 @@
+<acceptance-test-run title="Logging on successfully" name="Logging on successfully" steps="3" successful="0" failures="0" skipped="0" ignored="1" pending="2" result="PENDING" duration="13" timestamp="2014-06-29T13:09:07.351+10:00">
+  <user-story id="logging_on" name="Logging on" path="stories/marketing/logging_on.story"/>
+  <issues>
+    <issue>FH-22</issue>
+  </issues>
+  <tags>
+    <tag name="Marketing flights" type="Epic"/>
+    <tag name="ui" type="component"/>
+    <tag name="Logging on" type="story"/>
+  </tags>
+  <test-step result="PENDING" duration="0">
+    <description>Given Joe is a Marketing Admin</description>
+  </test-step>
+  <test-step result="IGNORED" duration="0">
+    <description>When {Joe} logs on with password &apos;secret&apos;</description>
+  </test-step>
+  <test-step result="PENDING" duration="0">
+    <description>Then he should be given access to the admin site</description>
+  </test-step>
+</acceptance-test-run>

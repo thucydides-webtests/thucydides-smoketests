@@ -1,0 +1,18 @@
+<acceptance-test-run title="Find international flight details by flight number" name="Find international flight details by flight number" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="21" timestamp="2014-06-11T07:30:39.961+01:00">
+  <user-story id="displaying_flight_details" name="Displaying flight details" path="stories/viewing_flights/displaying_flight_details.story"/>
+  <tags>
+    <tag name="Viewing flights" type="capability"/>
+    <tag name="Displaying flight details" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="2">
+    <description>Given I need to know the details of flight number {FH-102}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2">
+    <description>When I request the details about this flight</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3">
+    <description>Then I should receive the following:
+［| flightNumber | departure | destination  | time   |
+| FH-102       | SYD       | HKG          | 11:55  |］</description>
+  </test-step>
+</acceptance-test-run>

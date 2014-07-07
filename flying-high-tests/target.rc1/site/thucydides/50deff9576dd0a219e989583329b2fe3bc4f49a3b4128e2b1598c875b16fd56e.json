@@ -1,0 +1,66 @@
+{
+  "name" : "Earning standard points from an Economy flight\nNormal flights earn 1 point every 2 kilometers",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "Given the flying distance between {Sydney} and {Melbourne} is {878} km",
+    "duration" : 36,
+    "startTime" : 1404011062968,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 2,
+    "description" : "And I am a {Bronze} Frequent Flyer member",
+    "duration" : 5,
+    "startTime" : 1404011063005,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 3,
+    "description" : "When I fly from {Sydney} to {Melbourne} on {10/10/2014}",
+    "duration" : 4,
+    "startTime" : 1404011063010,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 4,
+    "description" : "Then I should earn {439} points",
+    "duration" : 7,
+    "startTime" : 1404011063015,
+    "result" : "SUCCESS"
+  } ],
+  "userStory" : {
+    "id" : "earning_points_from_flights",
+    "storyName" : "Earning points from flights",
+    "path" : "stories/earning_points/earning_points_from_flights.story"
+  },
+  "title" : "Earning standard points from an Economy flight\nNormal flights earn 1 point every 2 kilometers",
+  "issues" : [ "FH-1", "FH-12" ],
+  "additionalIssues" : [ "FH-1", "FH-12" ],
+  "versions" : [ "Release 1.0", "Iteration 1.3", "Iteration 1.2" ],
+  "tags" : [ {
+    "name" : "Earning Frequent Flyer points from flights",
+    "type" : "Story"
+  }, {
+    "name" : "Earning points from flights",
+    "type" : "story"
+  }, {
+    "name" : "Earning points from status",
+    "type" : "Story"
+  }, {
+    "name" : "Release 1.0",
+    "type" : "Version"
+  }, {
+    "name" : "Iteration 1.3",
+    "type" : "Version"
+  }, {
+    "name" : "backend",
+    "type" : "component"
+  }, {
+    "name" : "Iteration 1.2",
+    "type" : "Version"
+  }, {
+    "name" : "Earning Points",
+    "type" : "Epic"
+  } ],
+  "startTime" : 1404011062855,
+  "duration" : 180,
+  "manual" : false,
+  "result" : "SUCCESS"
+}

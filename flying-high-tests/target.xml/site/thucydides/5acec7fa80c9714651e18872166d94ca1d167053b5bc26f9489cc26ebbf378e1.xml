@@ -1,0 +1,32 @@
+<acceptance-test-run title="Successful authentication" name="Successful authentication" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="5362" timestamp="2014-06-11T07:30:33.917+01:00">
+  <user-story id="user_authentication" name="User authentication" path="stories/authentication/user_authentication.story"/>
+  <tags>
+    <tag name="Authentication" type="capability"/>
+    <tag name="User authentication" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="5">
+    <description>Given {Jane} is a registered Frequent Flyer</description>
+  </test-step>
+  <test-group name="When {Jane} authenticates with a valid email address and password" result="SUCCESS">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="3654">
+      <screenshots>
+        <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+      </screenshots>
+      <description>Enter email and password for: &lt;span class=&apos;step-parameter&apos;&gt;Jane&lt;/span&gt;</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then {Jane} should be given access to her account" result="SUCCESS">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="708">
+      <screenshots>
+        <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+      </screenshots>
+      <description>Verify welcome message for: &lt;span class=&apos;step-parameter&apos;&gt;Jane&lt;/span&gt;</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

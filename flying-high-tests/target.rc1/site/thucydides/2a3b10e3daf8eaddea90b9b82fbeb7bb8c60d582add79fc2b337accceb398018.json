@@ -1,0 +1,326 @@
+{
+  "name" : "Logging on with an expired account",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "Registering for the site",
+    "duration" : 22,
+    "startTime" : 1404011094641,
+    "result" : "SUCCESS",
+    "children" : [ {
+      "number" : 2,
+      "description" : "Given {Joe} is a Frequent Flyer member",
+      "duration" : 1,
+      "startTime" : 1404011094654,
+      "result" : "SUCCESS"
+    }, {
+      "number" : 3,
+      "description" : "And {Joe} has registered online with a password of 'secret'",
+      "duration" : 2,
+      "startTime" : 1404011094656,
+      "result" : "SUCCESS"
+    } ]
+  }, {
+    "number" : 4,
+    "description" : "Given the account has expired",
+    "duration" : 2,
+    "startTime" : 1404011094671,
+    "exception" : {
+      "cause" : {
+        "cause" : null,
+        "stackTrace" : [ {
+          "methodName" : "the_account_has_expired",
+          "fileName" : "LoginSteps.java",
+          "lineNumber" : 40,
+          "className" : "com.bddinaction.flyinghigh.jbehave.steps.LoginSteps",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "invoke0",
+          "fileName" : "NativeMethodAccessorImpl.java",
+          "lineNumber" : -2,
+          "className" : "sun.reflect.NativeMethodAccessorImpl",
+          "nativeMethod" : true
+        }, {
+          "methodName" : "invoke",
+          "fileName" : "NativeMethodAccessorImpl.java",
+          "lineNumber" : 62,
+          "className" : "sun.reflect.NativeMethodAccessorImpl",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "invoke",
+          "fileName" : "DelegatingMethodAccessorImpl.java",
+          "lineNumber" : 43,
+          "className" : "sun.reflect.DelegatingMethodAccessorImpl",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "invoke",
+          "fileName" : "Method.java",
+          "lineNumber" : 483,
+          "className" : "java.lang.reflect.Method",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "perform",
+          "fileName" : "StepCreator.java",
+          "lineNumber" : 569,
+          "className" : "org.jbehave.core.steps.StepCreator$ParameterisedStep",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 535,
+          "className" : "org.jbehave.core.embedder.StoryRunner$FineSoFar",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "runStepsWhileKeepingState",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 515,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "runScenarioSteps",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 479,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "runStepsWithLifecycle",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 445,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "runCancellable",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 305,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 220,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "StoryRunner.java",
+          "lineNumber" : 181,
+          "className" : "org.jbehave.core.embedder.StoryRunner",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "call",
+          "fileName" : "StoryManager.java",
+          "lineNumber" : 235,
+          "className" : "org.jbehave.core.embedder.StoryManager$EnqueuedStory",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "call",
+          "fileName" : "StoryManager.java",
+          "lineNumber" : 207,
+          "className" : "org.jbehave.core.embedder.StoryManager$EnqueuedStory",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "FutureTask.java",
+          "lineNumber" : 266,
+          "className" : "java.util.concurrent.FutureTask",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "runWorker",
+          "fileName" : "ThreadPoolExecutor.java",
+          "lineNumber" : 1142,
+          "className" : "java.util.concurrent.ThreadPoolExecutor",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "ThreadPoolExecutor.java",
+          "lineNumber" : 617,
+          "className" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "nativeMethod" : false
+        }, {
+          "methodName" : "run",
+          "fileName" : "Thread.java",
+          "lineNumber" : 744,
+          "className" : "java.lang.Thread",
+          "nativeMethod" : false
+        } ],
+        "message" : "Database crashed",
+        "localizedMessage" : "Database crashed",
+        "suppressed" : [ ]
+      },
+      "stackTrace" : [ {
+        "methodName" : "recordFailureDetailsInFailingTestStep",
+        "fileName" : "BaseStepListener.java",
+        "lineNumber" : 493,
+        "className" : "net.thucydides.core.steps.BaseStepListener",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "stepFailed",
+        "fileName" : "BaseStepListener.java",
+        "lineNumber" : 481,
+        "className" : "net.thucydides.core.steps.BaseStepListener",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "stepFailed",
+        "fileName" : "StepEventBus.java",
+        "lineNumber" : 309,
+        "className" : "net.thucydides.core.steps.StepEventBus",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "failed",
+        "fileName" : "ThucydidesReporter.java",
+        "lineNumber" : 554,
+        "className" : "net.thucydides.jbehave.ThucydidesReporter",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "failed",
+        "fileName" : "DelegatingStoryReporter.java",
+        "lineNumber" : 103,
+        "className" : "org.jbehave.core.reporters.DelegatingStoryReporter",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "failed",
+        "fileName" : "ConcurrentStoryReporter.java",
+        "lineNumber" : 272,
+        "className" : "org.jbehave.core.reporters.ConcurrentStoryReporter",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "describeTo",
+        "fileName" : "AbstractStepResult.java",
+        "lineNumber" : 57,
+        "className" : "org.jbehave.core.steps.AbstractStepResult$Failed",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 536,
+        "className" : "org.jbehave.core.embedder.StoryRunner$FineSoFar",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "runStepsWhileKeepingState",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 515,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "runScenarioSteps",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 479,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "runStepsWithLifecycle",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 445,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "runCancellable",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 305,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 220,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "StoryRunner.java",
+        "lineNumber" : 181,
+        "className" : "org.jbehave.core.embedder.StoryRunner",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "call",
+        "fileName" : "StoryManager.java",
+        "lineNumber" : 235,
+        "className" : "org.jbehave.core.embedder.StoryManager$EnqueuedStory",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "call",
+        "fileName" : "StoryManager.java",
+        "lineNumber" : 207,
+        "className" : "org.jbehave.core.embedder.StoryManager$EnqueuedStory",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "FutureTask.java",
+        "lineNumber" : 266,
+        "className" : "java.util.concurrent.FutureTask",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "runWorker",
+        "fileName" : "ThreadPoolExecutor.java",
+        "lineNumber" : 1142,
+        "className" : "java.util.concurrent.ThreadPoolExecutor",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "ThreadPoolExecutor.java",
+        "lineNumber" : 617,
+        "className" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+        "nativeMethod" : false
+      }, {
+        "methodName" : "run",
+        "fileName" : "Thread.java",
+        "lineNumber" : 744,
+        "className" : "java.lang.Thread",
+        "nativeMethod" : false
+      } ],
+      "message" : "Database crashed",
+      "localizedMessage" : "Database crashed",
+      "suppressed" : [ ]
+    },
+    "result" : "ERROR"
+  }, {
+    "number" : 5,
+    "description" : "When {Joe} logs on with password 'wrong'",
+    "duration" : 1,
+    "startTime" : 1404011094675,
+    "result" : "SKIPPED"
+  }, {
+    "number" : 6,
+    "description" : "Then he should be informed that his account has expired",
+    "duration" : 0,
+    "startTime" : 1404011094677,
+    "result" : "SKIPPED"
+  }, {
+    "number" : 7,
+    "description" : "And he should be invited to renew his account",
+    "duration" : 0,
+    "startTime" : 1404011094678,
+    "result" : "SKIPPED"
+  } ],
+  "userStory" : {
+    "id" : "logging_on",
+    "storyName" : "Logging on",
+    "path" : "stories/authentication/logging_on.story"
+  },
+  "title" : "Logging on with an expired account",
+  "issues" : [ "FH-7" ],
+  "additionalIssues" : [ "FH-7" ],
+  "versions" : [ "Release 1.0", "Iteration 1.1" ],
+  "tags" : [ {
+    "name" : "Release 1.0",
+    "type" : "Version"
+  }, {
+    "name" : "Authentication",
+    "type" : "Epic"
+  }, {
+    "name" : "ui",
+    "type" : "component"
+  }, {
+    "name" : "Logging on",
+    "type" : "story"
+  }, {
+    "name" : "Iteration 1.1",
+    "type" : "Version"
+  } ],
+  "startTime" : 1404011094630,
+  "duration" : 61,
+  "testFailureClassname" : "java.io.IOException",
+  "testFailureMessage" : "Database crashed",
+  "annotatedResult" : "ERROR",
+  "manual" : false,
+  "result" : "ERROR"
+}

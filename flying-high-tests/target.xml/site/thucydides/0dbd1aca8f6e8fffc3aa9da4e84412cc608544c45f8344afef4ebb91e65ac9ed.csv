@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Displaying flight details","Find flight details by flight number","SUCCESS","2014-06-11T07:30:39.931+01:00","0.0","0.03"
+"Displaying flight details","Find international flight details by flight number","SUCCESS","2014-06-11T07:30:39.961+01:00","0.0","0.02"
+"Displaying flight details","Should see featured destinations","SUCCESS","2014-06-11T07:30:50.169+01:00","0.0","4.34"

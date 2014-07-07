@@ -1,0 +1,20 @@
+<acceptance-test-run title="Earning standard points from an Economy flight&amp;#10;Normal flights earn 1 point every 2 kilometers" name="Earning standard points from an Economy flight
+Normal flights earn 1 point every 2 kilometers" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="146" timestamp="2014-06-11T07:30:22.501+01:00">
+  <user-story id="earning_points_from_flights" name="Earning points from flights" path="stories/earning_points/earning_points_from_flights.story"/>
+  <tags>
+    <tag name="Earning points" type="capability"/>
+    <tag name="Earning points from flights" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="34">
+    <description>Given the flying distance between {Sydney} and {Melbourne} is {878} km</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3">
+    <description>And I am a {Bronze} Frequent Flyer member</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4">
+    <description>When I fly from {Sydney} to {Melbourne} on {10/10/2014}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="6">
+    <description>Then I should earn {439} points</description>
+  </test-step>
+</acceptance-test-run>

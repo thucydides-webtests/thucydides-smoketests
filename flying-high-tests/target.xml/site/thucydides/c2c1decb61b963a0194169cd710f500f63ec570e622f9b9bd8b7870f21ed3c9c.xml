@@ -1,0 +1,217 @@
+<acceptance-test-run title="Members should get status updates based on status points earned" name="Members should get status updates based on status points earned" steps="40" successful="40" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="298" timestamp="2014-06-11T07:30:40.176+01:00">
+  <user-story id="calculating_status_based_on_points" name="Calculating status based on points" path="stories/status/calculating_status_based_on_points.story"/>
+  <tags>
+    <tag name="Status" type="capability"/>
+    <tag name="Calculating status based on points" type="story"/>
+  </tags>
+  <examples>
+    <headers>
+      <header>initialStatus</header>
+      <header>initialStatusPoints</header>
+      <header>extraPoints</header>
+      <header>finalStatus</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>Bronze</value>
+        <value>0</value>
+        <value>300</value>
+        <value>Silver</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Silver</value>
+        <value>0</value>
+        <value>700</value>
+        <value>Gold</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Gold</value>
+        <value>0</value>
+        <value>1500</value>
+        <value>Platinum</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Bronze</value>
+        <value>200</value>
+        <value>99</value>
+        <value>Bronze</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Bronze</value>
+        <value>200</value>
+        <value>100</value>
+        <value>Silver</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Silver</value>
+        <value>600</value>
+        <value>99</value>
+        <value>Silver</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Silver</value>
+        <value>600</value>
+        <value>100</value>
+        <value>Gold</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Gold</value>
+        <value>1400</value>
+        <value>99</value>
+        <value>Gold</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Gold</value>
+        <value>1400</value>
+        <value>100</value>
+        <value>Platinum</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Platinum</value>
+        <value>2000</value>
+        <value>100</value>
+        <value>Platinum</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {initialStatus=Bronze, initialStatusPoints=0, extraPoints=300, finalStatus=Silver}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="3">
+      <description>Given a member has a status of {Bronze}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {0} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>When he earns {300} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>Then he should have a status of {Silver}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[2] {initialStatus=Silver, initialStatusPoints=0, extraPoints=700, finalStatus=Gold}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Silver}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="1">
+      <description>And he has {0} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {700} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="4">
+      <description>Then he should have a status of {Gold}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[3] {initialStatus=Gold, initialStatusPoints=0, extraPoints=1500, finalStatus=Platinum}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Gold}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {0} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {1500} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>Then he should have a status of {Platinum}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[4] {initialStatus=Bronze, initialStatusPoints=200, extraPoints=99, finalStatus=Bronze}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Bronze}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {200} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {99} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>Then he should have a status of {Bronze}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[5] {initialStatus=Bronze, initialStatusPoints=200, extraPoints=100, finalStatus=Silver}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="3">
+      <description>Given a member has a status of {Bronze}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {200} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>When he earns {100} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>Then he should have a status of {Silver}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[6] {initialStatus=Silver, initialStatusPoints=600, extraPoints=99, finalStatus=Silver}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Silver}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {600} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {99} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>Then he should have a status of {Silver}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[7] {initialStatus=Silver, initialStatusPoints=600, extraPoints=100, finalStatus=Gold}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="3">
+      <description>Given a member has a status of {Silver}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {600} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {100} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>Then he should have a status of {Gold}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[8] {initialStatus=Gold, initialStatusPoints=1400, extraPoints=99, finalStatus=Gold}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Gold}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {1400} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="1">
+      <description>When he earns {99} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="1">
+      <description>Then he should have a status of {Gold}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[9] {initialStatus=Gold, initialStatusPoints=1400, extraPoints=100, finalStatus=Platinum}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="3">
+      <description>Given a member has a status of {Gold}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>And he has {1400} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>When he earns {100} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>Then he should have a status of {Platinum}</description>
+    </test-step>
+  </test-group>
+  <test-group name="[10] {initialStatus=Platinum, initialStatusPoints=2000, extraPoints=100, finalStatus=Platinum}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="2">
+      <description>Given a member has a status of {Platinum}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>And he has {2000} status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When he earns {100} extra status points</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="1">
+      <description>Then he should have a status of {Platinum}</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

@@ -1,0 +1,23 @@
+<story path="stories/marketing/logging_on.story" title="Logging on to the &apos;Flying High&apos; admin site">
+<meta>
+<property keyword="@" name="issue" value="FH-22"/>
+<property keyword="@" name="tag" value="component:ui"/>
+</meta>
+<scenario keyword="Scenario:" title="Logging on successfully">
+<step outcome="pending" keyword="PENDING">Given Joe is a Marketing Admin</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When <parameter>Joe</parameter> logs on with password &apos;secret&apos;</step>
+<step outcome="pending" keyword="PENDING">Then he should be given access to the admin site</step>
+<pendingMethod>@Given(&quot;Joe is a Marketing Admin&quot;)
+@Pending
+public void givenJoeIsAMarketingAdmin() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@Then(&quot;he should be given access to the admin site&quot;)
+@Pending
+public void thenHeShouldBeGivenAccessToTheAdminSite() {
+  // PENDING
+}
+</pendingMethod>
+</scenario>
+</story>

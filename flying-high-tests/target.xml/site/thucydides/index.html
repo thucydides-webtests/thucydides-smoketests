@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Thucydides Reports</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/core.css"/>
+    <link rel="stylesheet" href="css/link.css"/>
+    <link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css"/>
+
+
+    <!--[if IE]>
+    <script language="javascript" type="text/javascript" src="jit/Extras/excanvas.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+
+    <link type="text/css" href="jqueryui/css/start/jquery-ui-1.8.18.custom.css" rel="Stylesheet"/>
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+        var test_results_plot = $.jqplot('test_results_pie_chart', [
+            [
+                ['Passing', 0.787879],
+                
+                ['Pending', 0.121212],
+                
+                ['Ignored', 0.030303],
+                
+                ['Failing', 0.030303],
+                
+                ['Errors',  0.030303]
+            ]
+        ], {
+
+            gridPadding: {top: 0, bottom: 38, left: 0, right: 0},
+            seriesColors: ['#30cb23',
+                
+                '#a2f2f2',
+                
+                '#eeeadd',
+                
+                '#f8001f',
+                
+                '#fc6e1f'],
+            seriesDefaults: {
+                renderer: $.jqplot.PieRenderer,
+                trendline: { show: false },
+                rendererOptions: { padding: 8, showDataLabels: true }
+            },
+            legend: {
+                show: true,
+                placement: 'outside',
+                rendererOptions: {
+                    numberRows: 2
+                },
+                location: 's',
+                marginTop: '15px'
+            },
+            series: [
+                {label: '26 / 33 tests passed' },
+                {label: '4 / 33 tests pending'},
+                {label: '1 / 33 tests not executed'},
+                {label: '1 / 33 tests failed'},
+                {label: '1 / 33 errors'}
+            ]
+        });
+
+        var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
+            [
+                ['Passing', 0.810458],
+                
+                ['Pending', 0.078431],
+                
+                ['Ignored', 0.03268],
+                
+                ['Failing', 0.03268],
+                
+                ['Errors', 0.045752]
+            ]
+        ], {
+
+            gridPadding: {top: 0, bottom: 38, left: 0, right: 0},
+            seriesColors: ['#30cb23',
+                
+                '#a2f2f2',
+                
+                '#eeeadd',
+                
+                '#f8001f',
+                
+                '#fc6e1f'],
+
+            seriesDefaults: {
+                renderer: $.jqplot.PieRenderer,
+                trendline: { show: false },
+                rendererOptions: { padding: 8, showDataLabels: true }
+            },
+            legend: {
+                show: true,
+                placement: 'outside',
+                rendererOptions: {
+                    numberRows: 2
+                },
+                location: 's',
+                marginTop: '15px'
+            },
+            series: [
+                {label: '26 / 33 tests passed (0.810458% of all test steps)' },
+                {label: '4 / 33 tests pending'},
+                {label: '1 / 33 tests not executed'},
+                {label: '1 / 33 tests failed (0.03268% of all test steps)'},
+                {label: '1 / 33 errors (0.045752% of all test steps)'}
+            ]
+        });
+
+        // Results table
+        $('#test-results-table').dataTable({
+            "aaSorting": [
+                [ 1, "asc" ]
+            ],
+            "bJQueryUI": true,
+            "iDisplayLength": 25
+        });
+
+        // Pie charts
+        $('#test-results-tabs').tabs()
+
+        $('#toggleNormalPieChart').click(function () {
+            $("#test_results_pie_chart").toggle();
+        });
+
+        $('#toggleWeightedPieChart').click(function () {
+            $("#weighted_test_results_pie_chart").toggle();
+        });
+
+
+
+    })
+    ;
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/logo.jpg" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+
+<div id="contenttop">
+    <div class="middlebg">
+        <span class="bluetext"><a href="index.html" class="bluetext">Home</a> </span>
+    </div>
+    <div class="rightbg"></div>
+</div>
+
+<div class="clr"></div>
+
+<!--/* starts second table*/-->
+<div class="menu">
+    <ul>
+        <li><a href="index.html" class="current">Overall Test Results</a></li>
+        <li><a href="capabilities.html" >Requirements</a></li>
+        <li><a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html" >Capabilities</a></li>
+        <li><a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html" >Stories</a></li>
+    </ul>
+    <span class="date-and-time">Report generated 11-06-2014 07:30</span>
+    <br style="clear:left"/>
+</div>
+<div class="clr"></div>
+<div id="beforetable"></div>
+<div id="results-dashboard">
+<div class="middlb">
+<div class="table">
+<h2>Test Results: All Tests</h2>
+<table class='overview'>
+    <tr>
+        <td width="375px" valign="top">
+            <div class="test-count-summary">
+                <span class="test-count-title">33
+                    test scenarios (including 15
+                    rows of test data)</span>
+                <div>
+
+                <span class="test-count">
+                    26
+                        <a href="01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html">passed</a>
+                    ,
+                </span>
+                <span class="test-count">
+                    4
+                        <a href="bde4fca42ca8baa0fe2eac76a241c84327dfe4ca903a1daa7cae83a1035d4745.html">pending</a>
+                    ,
+                </span>
+                <span class="test-count">
+                    1
+                        <a href="da5b0c51b332adf0ef993a9f086d6a1b51a3d800248ec6ae281212092f35bd37.html">failed</a>
+                    ,
+                </span>
+                <span class="test-count">
+                    1
+                        <a href="c8a926210aeff57f8aa7ea799262d4b730915a909cd5ecd6a705b1fa13bc7aa8.html">with errors</a>
+                    ,
+                </span>
+                <span class="test-count">
+                    1
+                        <a href="c1b352893c3d69e59317fd825f20a75f987a859afe98fb4434f47dce70c48fd4.html">ignored</a>
+                    ,
+                </span>
+                <span class="test-count">
+                    0
+skipped
+                </span>
+                    <a href="results.csv">[CSV]</a>
+                </div>
+            </div>
+
+            <div id="test-results-tabs">
+                <ul>
+                    <li><a href="#test-results-tabs-1">Test Count</a></li>
+                    <li><a href="#test-results-tabs-2">Weighted Tests</a></li>
+                </ul>
+                <div id="test-results-tabs-1">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <span class="caption">Total number of tests that pass, fail, or are pending.</span>
+                                <span class="togglePieChart" id="toggleNormalPieChart"><a href="#">Show/Hide Pie
+                                    Chart</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: text-top;">
+                                <div id="test_results_pie_chart"></div>
+                            </td>
+                            <td class="related-tags-section">
+                                <div>
+
+
+
+
+
+<div>
+    <h4>Test Result Summary</h4>
+    <table class="summary-table">
+        <head>
+            <tr>
+                <th>Test Type</th>
+                <th>Total</th>
+                <th>Pass&nbsp;<i class="icon-check"/> </th>
+                <th>Fail&nbsp;<i class="icon-thumbs-down"/></th>
+                <th>Pending&nbsp;<i class="icon-calendar"/></th>
+                <th>Ignored&nbsp;<i class="icon-ban-circle"/></th>
+            </tr>
+        </head>
+        <body>
+        <tr>
+            <td class="summary-leading-column">Automated</td>
+            <td>33</td>
+            <td>26 (79%)</td>
+            <td>2 (6%)</td>
+            <td>4 (12%)</td>
+            <td>1 (3%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Manual</td>
+            <td>0</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total</td>
+            <td>33</td>
+            <td>26 (79%)</td>
+            <td>2 (3%)</td>
+            <td>4 (12%)</td>
+            <td>1 (3%)</td>
+        </tr>
+        </body>
+    </table>
+</div>                                </div>
+                                <div>
+<h4>Related Tags</h4>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Capabilities
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="FAILURE-text">
+                                <a href="d93e87879012862c63caed74d92adf4284c01c25638c7f7ec1ce79a5fe2ea247.html">Authentication</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">50%</td>
+                                <td width="150px">
+                                    <a href="d93e87879012862c63caed74d92adf4284c01c25638c7f7ec1ce79a5fe2ea247.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="1 out of 4 tests (7 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 112px;"
+                                                         title="1 out of 4 tests (5 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 75px;"
+                                                             title="2 out of 4 tests (10 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="d633f28168f59116dcede0a23325e626284adb9a95e51e41903f48123e46acff.html">Earning Points</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">63.6%</td>
+                                <td width="150px">
+                                    <a href="d633f28168f59116dcede0a23325e626284adb9a95e51e41903f48123e46acff.html">
+                                        <div class="percentagebar"
+                                             title="4 out of 11 tests (12 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 95px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 95px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 95px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 95px;"
+                                                             title="7 out of 11 tests (39 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="2c5a8290371193a1e67443d9f30b0ee87467c1c29ebb6821efa449ccd00e1dbc.html">Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="2c5a8290371193a1e67443d9f30b0ee87467c1c29ebb6821efa449ccd00e1dbc.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 2 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="2 out of 2 tests (9 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="40769e349e102e461500fc9cbe186369c4f2874abe26f56029c371bb188ce4f8.html">Marketing</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="40769e349e102e461500fc9cbe186369c4f2874abe26f56029c371bb188ce4f8.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="0bc576ae3033042eca968fc80a826a88a1a4ce5301577c3002e02d401aca026b.html">Status</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="0bc576ae3033042eca968fc80a826a88a1a4ce5301577c3002e02d401aca026b.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 11 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="11 out of 11 tests (53 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">Viewing Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">75%</td>
+                                <td width="150px">
+                                    <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 112px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 112px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 112px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Features
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">Viewing Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">75%</td>
+                                <td width="150px">
+                                    <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 112px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 112px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 112px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Stories
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="f0d98737f0a5c405a742509619d7682295e061bf1e1ef6fc1a58e93ac875b01f.html">Booking A Flight</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="f0d98737f0a5c405a742509619d7682295e061bf1e1ef6fc1a58e93ac875b01f.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 2 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="2 out of 2 tests (9 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="3198d9826866c1f4b269750232adcd1585c65abd0f48b87acafc3d1b79820b72.html">Calculating Status Based On Points</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="3198d9826866c1f4b269750232adcd1585c65abd0f48b87acafc3d1b79820b72.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 11 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="11 out of 11 tests (53 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="2ee1acd5e26d49b9799de10fc317620052deae6e10a08c35f4abad50bb001076.html">Displaying Flight Details</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">75%</td>
+                                <td width="150px">
+                                    <a href="2ee1acd5e26d49b9799de10fc317620052deae6e10a08c35f4abad50bb001076.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 112px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 112px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 112px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="1c1009811e9553596579868f87974a1eecf6b196255f92c53b37cf4799a4c864.html">Earning Extra Points From Status</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="1c1009811e9553596579868f87974a1eecf6b196255f92c53b37cf4799a4c864.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 5 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 5 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 5 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="5 out of 5 tests (30 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="a11c1805e8c24f5670b959ffcc2fa3ac499783cb023445d3d37b3fe14a8cf66c.html">Earning Points From Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="a11c1805e8c24f5670b959ffcc2fa3ac499783cb023445d3d37b3fe14a8cf66c.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (4 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="a1b3b19cd6d64bd86a75056ea7875dec7769f4a9e618a71c05e4cf626e7b0b57.html">Earning Points From Purchases</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">50%</td>
+                                <td width="150px">
+                                    <a href="a1b3b19cd6d64bd86a75056ea7875dec7769f4a9e618a71c05e4cf626e7b0b57.html">
+                                        <div class="percentagebar"
+                                             title="1 out of 2 tests (3 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 75px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 75px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 75px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 75px;"
+                                                             title="1 out of 2 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="ae6fd662bcb93fe57fb258c93577046b61a9241946397528e26e4b7a73ee248e.html">Earning Points From Special Offers</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">0%</td>
+                                <td width="150px">
+                                    <a href="ae6fd662bcb93fe57fb258c93577046b61a9241946397528e26e4b7a73ee248e.html">
+                                        <div class="percentagebar"
+                                             title="3 out of 3 tests (9 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 0px;"
+                                                 title="0 out of 3 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 0px;"
+                                                     title="0 out of 3 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 0px;"
+                                                         title="0 out of 3 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 0px;"
+                                                             title="0 out of 3 tests (0 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="FAILURE-text">
+                                <a href="90f737ccd9be37b9607f0e4cee5326b2c1c3946c55cbd0fea225d168b0181776.html">Logging On</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">33.3%</td>
+                                <td width="150px">
+                                    <a href="90f737ccd9be37b9607f0e4cee5326b2c1c3946c55cbd0fea225d168b0181776.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 3 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 3 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="1 out of 3 tests (7 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 100px;"
+                                                         title="1 out of 3 tests (5 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 50px;"
+                                                             title="1 out of 3 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="90b13db42532cad09d20b2247e8856ec6a968569140e00503ad031894ebfcecc.html">Show Featured Destinations</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="90b13db42532cad09d20b2247e8856ec6a968569140e00503ad031894ebfcecc.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="5ee8f6fd551b4e5821de0aaa3fd837ef3e2a797cac6b0bfdd1cbc98706e71a36.html">User Authentication</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="5ee8f6fd551b4e5821de0aaa3fd837ef3e2a797cac6b0bfdd1cbc98706e71a36.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="test-results-tabs-2">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <span class="caption">Test results weighted by test size in steps (average steps per test: 4.625) .</span>
+                                <span class="togglePieChart" id="toggleWeightedPieChart"><a href="#">Show/Hide Pie
+                                    Chart</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: text-top;">
+                                <div id="weighted_test_results_pie_chart"></div>
+                            </td>
+                            <td class="related-tags-section">
+                                <div>
+
+
+
+
+
+<div>
+    <h4>Test Result Summary</h4>
+    <table class="summary-table">
+        <head>
+            <tr>
+                <th>Test Type</th>
+                <th>Total</th>
+                <th>Pass&nbsp;<i class="icon-check"/> </th>
+                <th>Fail&nbsp;<i class="icon-thumbs-down"/></th>
+                <th>Pending&nbsp;<i class="icon-calendar"/></th>
+                <th>Ignored&nbsp;<i class="icon-ban-circle"/></th>
+            </tr>
+        </head>
+        <body>
+        <tr>
+            <td class="summary-leading-column">Automated</td>
+            <td>33</td>
+            <td>26 (79%)</td>
+            <td>2 (6%)</td>
+            <td>4 (12%)</td>
+            <td>1 (3%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Manual</td>
+            <td>0</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total</td>
+            <td>33</td>
+            <td>26 (79%)</td>
+            <td>2 (3%)</td>
+            <td>4 (12%)</td>
+            <td>1 (3%)</td>
+        </tr>
+        </body>
+    </table>
+</div>                                </div>
+                                <div>
+<h4>Related Tags</h4>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Capabilities
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="FAILURE-text">
+                                <a href="d93e87879012862c63caed74d92adf4284c01c25638c7f7ec1ce79a5fe2ea247.html">Authentication</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">45.5%</td>
+                                <td width="150px">
+                                    <a href="d93e87879012862c63caed74d92adf4284c01c25638c7f7ec1ce79a5fe2ea247.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="1 out of 4 tests (7 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 102px;"
+                                                         title="1 out of 4 tests (5 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 68px;"
+                                                             title="2 out of 4 tests (10 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="d633f28168f59116dcede0a23325e626284adb9a95e51e41903f48123e46acff.html">Earning Points</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">76.5%</td>
+                                <td width="150px">
+                                    <a href="d633f28168f59116dcede0a23325e626284adb9a95e51e41903f48123e46acff.html">
+                                        <div class="percentagebar"
+                                             title="4 out of 11 tests (12 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 115px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 115px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 115px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 115px;"
+                                                             title="7 out of 11 tests (39 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="2c5a8290371193a1e67443d9f30b0ee87467c1c29ebb6821efa449ccd00e1dbc.html">Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="2c5a8290371193a1e67443d9f30b0ee87467c1c29ebb6821efa449ccd00e1dbc.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 2 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="2 out of 2 tests (9 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="40769e349e102e461500fc9cbe186369c4f2874abe26f56029c371bb188ce4f8.html">Marketing</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="40769e349e102e461500fc9cbe186369c4f2874abe26f56029c371bb188ce4f8.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="0bc576ae3033042eca968fc80a826a88a1a4ce5301577c3002e02d401aca026b.html">Status</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="0bc576ae3033042eca968fc80a826a88a1a4ce5301577c3002e02d401aca026b.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 11 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="11 out of 11 tests (53 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">Viewing Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">72.7%</td>
+                                <td width="150px">
+                                    <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 109px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 109px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 109px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Features
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">Viewing Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">72.7%</td>
+                                <td width="150px">
+                                    <a href="fa5dc8843696032e06bd218d35d29ce5cb0a024f16a6219e6d7eb53701899ee3.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 109px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 109px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 109px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+        <table class="test-summary-table">
+            <tr>
+                <td colspan="3">
+                    <div class="tagTypeTitle">
+                    Stories
+                    </div>
+                </td>
+            </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="f0d98737f0a5c405a742509619d7682295e061bf1e1ef6fc1a58e93ac875b01f.html">Booking A Flight</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="f0d98737f0a5c405a742509619d7682295e061bf1e1ef6fc1a58e93ac875b01f.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 2 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="2 out of 2 tests (9 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="3198d9826866c1f4b269750232adcd1585c65abd0f48b87acafc3d1b79820b72.html">Calculating Status Based On Points</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="3198d9826866c1f4b269750232adcd1585c65abd0f48b87acafc3d1b79820b72.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 11 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 11 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 11 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 11 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="11 out of 11 tests (53 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="2ee1acd5e26d49b9799de10fc317620052deae6e10a08c35f4abad50bb001076.html">Displaying Flight Details</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">72.7%</td>
+                                <td width="150px">
+                                    <a href="2ee1acd5e26d49b9799de10fc317620052deae6e10a08c35f4abad50bb001076.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 4 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="1 out of 4 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 109px;"
+                                                     title="0 out of 4 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 109px;"
+                                                         title="0 out of 4 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 109px;"
+                                                             title="3 out of 4 tests (8 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="1c1009811e9553596579868f87974a1eecf6b196255f92c53b37cf4799a4c864.html">Earning Extra Points From Status</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="1c1009811e9553596579868f87974a1eecf6b196255f92c53b37cf4799a4c864.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 5 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 5 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 5 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="5 out of 5 tests (30 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="a11c1805e8c24f5670b959ffcc2fa3ac499783cb023445d3d37b3fe14a8cf66c.html">Earning Points From Flights</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="a11c1805e8c24f5670b959ffcc2fa3ac499783cb023445d3d37b3fe14a8cf66c.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (4 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="a1b3b19cd6d64bd86a75056ea7875dec7769f4a9e618a71c05e4cf626e7b0b57.html">Earning Points From Purchases</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">62.5%</td>
+                                <td width="150px">
+                                    <a href="a1b3b19cd6d64bd86a75056ea7875dec7769f4a9e618a71c05e4cf626e7b0b57.html">
+                                        <div class="percentagebar"
+                                             title="1 out of 2 tests (3 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 94px;"
+                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 94px;"
+                                                     title="0 out of 2 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 94px;"
+                                                         title="0 out of 2 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 94px;"
+                                                             title="1 out of 2 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="PENDING-text">
+                                <a href="ae6fd662bcb93fe57fb258c93577046b61a9241946397528e26e4b7a73ee248e.html">Earning Points From Special Offers</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">0%</td>
+                                <td width="150px">
+                                    <a href="ae6fd662bcb93fe57fb258c93577046b61a9241946397528e26e4b7a73ee248e.html">
+                                        <div class="percentagebar"
+                                             title="3 out of 3 tests (9 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 0px;"
+                                                 title="0 out of 3 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 0px;"
+                                                     title="0 out of 3 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 0px;"
+                                                         title="0 out of 3 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 0px;"
+                                                             title="0 out of 3 tests (0 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="FAILURE-text">
+                                <a href="90f737ccd9be37b9607f0e4cee5326b2c1c3946c55cbd0fea225d168b0181776.html">Logging On</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">29.4%</td>
+                                <td width="150px">
+                                    <a href="90f737ccd9be37b9607f0e4cee5326b2c1c3946c55cbd0fea225d168b0181776.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 3 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 3 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="1 out of 3 tests (7 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 88px;"
+                                                         title="1 out of 3 tests (5 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 44px;"
+                                                             title="1 out of 3 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="90b13db42532cad09d20b2247e8856ec6a968569140e00503ad031894ebfcecc.html">Show Featured Destinations</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="90b13db42532cad09d20b2247e8856ec6a968569140e00503ad031894ebfcecc.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+  <!-- outcomesForType.withTag(tagName)-->
+                <tr>
+                    <td class="bluetext" class="tag-title">
+                        <span class="SUCCESS-text">
+                                <a href="5ee8f6fd551b4e5821de0aaa3fd837ef3e2a797cac6b0bfdd1cbc98706e71a36.html">User Authentication</a>
+                        </span>
+                    </td>
+                    <td width="150px" class="lightgreentext">
+
+
+                        <table>
+                            <tr>
+                                <td width="50px">100%</td>
+                                <td width="150px">
+                                    <a href="5ee8f6fd551b4e5821de0aaa3fd837ef3e2a797cac6b0bfdd1cbc98706e71a36.html">
+                                        <div class="percentagebar"
+                                             title="0 out of 1 tests (0 steps) pending"
+                                             style="width: 150px;">
+                                            <div class="ignoredbar"
+                                                 style="width: 150px;"
+                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                <div class="errorbar"
+                                                     style="width: 150px;"
+                                                     title="0 out of 1 tests (0 steps) broken">
+                                                    <div class="failingbar"
+                                                         style="width: 150px;"
+                                                         title="0 out of 1 tests (0 steps) failing">
+                                                        <div class="passingbar"
+                                                             style="width: 150px;"
+                                                             title="1 out of 1 tests (5 steps) passing">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <div><h3>Tests</h3></div>
+            <div id="test_list_tests" class="table">
+                <div class="test-results">
+                    <table id="test-results-table">
+                        <thead>
+                        <tr>
+                            <th width="50" class="test-results-heading">&nbsp;</th>
+                            <th width="%" class="test-results-heading">Tests</th>
+                            <th width="70" class="test-results-heading">Steps</th>
+
+
+                            <th width="65" class="test-results-heading">Stable</th>
+                            <th width="100" class="test-results-heading">Duration<br>(seconds)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="ec63d2df40ba6276a3f4b3db7e0f62263bc527540ac7660686e18065d2717a77.html" title="">Displaying featured destinations </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">9.84</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-PENDING">
+                            <td><img src="images/pending.png" title="PENDING"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">PENDING</span></td>
+                            <td class="PENDING-text"><a
+                                    href="6af262279456791cfbdaa19130591623ace77c4109a5ce290d9c45f9a2d4ab2b.html" title="">Earning points from car rental packages </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.03</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-PENDING">
+                            <td><img src="images/pending.png" title="PENDING"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">PENDING</span></td>
+                            <td class="PENDING-text"><a
+                                    href="cfa32f4c36ad0893df330f86cdeb9df49fe956613a79c8b57417f9feaf8da2a9.html" title="">Earning points from credit card purchases </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.02</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-PENDING">
+                            <td><img src="images/pending.png" title="PENDING"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">PENDING</span></td>
+                            <td class="PENDING-text"><a
+                                    href="59efc11d1bed9eba4ae0ced1308a141cdbea2390185971d8f03b71e952370f0b.html" title="">Earning points from hotel packages </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.02</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-PENDING">
+                            <td><img src="images/pending.png" title="PENDING"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">PENDING</span></td>
+                            <td class="PENDING-text"><a
+                                    href="a0e966d56b4daeaae501b82e42707cbd19f52a6f3a3d9b0e8c4d00ccec7c559c.html" title="">Earning points from partner promotions </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.03</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="cb4d03c748790a7bd3b0098e9beca25d7eb9b57aa0babcfbf1950cdba9063d2c.html" title="">Earning points from purchases with partners </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.03</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="28e4ec872fbbeefb18ffb25c1ae3e67b5f8ac07190179a6ae233e01511cef50d.html" title="">Earning points on flights by Frequent Flyer status </a>
+                            </td>
+
+                            <td class="lightgreentext">30</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.29</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="7715d17231e1156244e6ab22f4a93647e6141e206b55e95458b36a32db972588.html" title="">Earning standard points from an Economy flight
+Normal flights earn 1 point every 2 kilometers </a>
+                            </td>
+
+                            <td class="lightgreentext">4</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.15</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="2a49e7e396f21dfc82e89f94e451e959df1a0382ebf5ab344fedf05ccd866525.html" title="">Filtering cities </a>
+                            </td>
+
+                            <td class="lightgreentext">4</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">2.21</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="bcf9c6dc4a16cbc6f16fdfaa769083bad91fd1516386fb19d0696761d84c980f.html" title="">Find flight details by flight number </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.03</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="35ceec3b7223eeffcc4b3f4424c66768063220f769be141a16add656e95f3ab9.html" title="">Find international flight details by flight number </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.02</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="e60b342856f658a3872e2b0ea01385b2fa13a6ddf7f4bb60c72695c80b515766.html" title="">Logging on successfully </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.09</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-ERROR">
+                            <td><img src="images/cross.png" title="ERROR"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">ERROR</span></td>
+                            <td class="ERROR-text"><a
+                                    href="2a3b10e3daf8eaddea90b9b82fbeb7bb8c60d582add79fc2b337accceb398018.html" title="">Logging on with an expired account </a>
+                            </td>
+
+                            <td class="lightgreentext">7</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.1</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-FAILURE">
+                            <td><img src="images/fail.png" title="FAILURE"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">FAILURE</span></td>
+                            <td class="FAILURE-text"><a
+                                    href="eecd3f381404c0df7532505a31f11d22c87ecd27711e734a6c3ae8face4fbbbe.html" title="">Logging on with an incorrect password </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.12</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="c2c1decb61b963a0194169cd710f500f63ec570e622f9b9bd8b7870f21ed3c9c.html" title="">Members should get status updates based on status points earned </a>
+                            </td>
+
+                            <td class="lightgreentext">50</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.3</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="210edbdc93a05f0c40fc52ad8d3312dcc851025d4d098b4a3d9d539bb2b47b5a.html" title="">New members should start out as Bronze members </a>
+                            </td>
+
+                            <td class="lightgreentext">3</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0.03</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-IGNORED">
+                            <td><img src="images/ignor.png" title="IGNORED"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">IGNORED</span></td>
+                            <td class="IGNORED-text"><a
+                                    href="cc81c98de70ee02fa1cb82747527bc256aaedb49c9797eb4089453ca51cf7bcd.html" title="">Should see favorite destinations </a>
+                            </td>
+
+                            <td class="lightgreentext">0</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">0</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="d0f70c94310a0c5804ae2b9d002d5e67aa11a2fb3e9093bcd7187f1d1190867a.html" title="">Should see featured destinations </a>
+                            </td>
+
+                            <td class="lightgreentext">2</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">4.34</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="5acec7fa80c9714651e18872166d94ca1d167053b5bc26f9489cc26ebbf378e1.html" title="">Successful authentication </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">5.36</td>
+                        </tr>
+
+
+
+
+                        <tr class="test-SUCCESS">
+                            <td><img src="images/success.png" title="SUCCESS"
+                                     class="summary-icon"/>
+                                
+                                <span style="display:none">SUCCESS</span></td>
+                            <td class="SUCCESS-text"><a
+                                    href="700464dad5041a90d72b85259511c9b0526940603893b557ae9e1111093a9ef8.html" title="">Viewing available flights </a>
+                            </td>
+
+                            <td class="lightgreentext">5</td>
+
+
+                            <td class="bluetext">
+                                <img src="images/traffic-in-progress.gif"
+                                     title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                     class="summary-icon"/>
+                                <span style="display:none">0</span>
+                            </td>
+                            <td class="lightgreentext">5.22</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter"></div>
+
+</body>
+</html>

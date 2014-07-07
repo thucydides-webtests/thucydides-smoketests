@@ -1,0 +1,92 @@
+{
+  "name" : "should_create_a_valid_user_account",
+  "testCaseName" : "com.bddinaction.flyinghigh.junit.WhenCreatingClientAccounts",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 2,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 3,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 4,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 5,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 6,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 7,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 8,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 9,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 10,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 11,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 12,
+    "description" : "Should create a valid user account",
+    "duration" : 0,
+    "startTime" : 1404011370669,
+    "result" : "SUCCESS"
+  } ],
+  "userStory" : {
+    "id" : "com.bddinaction.flyinghigh.junit.WhenCreatingClientAccounts",
+    "storyName" : "When creating client accounts",
+    "storyClassName" : "com.bddinaction.flyinghigh.junit.WhenCreatingClientAccounts",
+    "path" : "com.bddinaction.flyinghigh.junit"
+  },
+  "title" : "Should create a valid user account",
+  "tags" : [ {
+    "name" : "When creating client accounts",
+    "type" : "story"
+  } ],
+  "startTime" : 1404011370640,
+  "duration" : 6,
+  "manual" : false,
+  "result" : "SUCCESS"
+}

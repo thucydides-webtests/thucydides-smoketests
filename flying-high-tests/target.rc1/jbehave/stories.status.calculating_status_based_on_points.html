@@ -1,0 +1,113 @@
+<div class="story">
+<h1>Frequent Flyer status is calculated based on points</h1>
+<div class="path">stories/status/calculating_status_based_on_points.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@issue FH-17</div>
+<div class="property">@tag component:ui</div>
+</div>
+<div class="scenario">
+<h2>Scenario: New members should start out as Bronze members</h2>
+<div class="step successful">Given <span class="step parameter">Jill</span> <span class="step parameter">Smith</span> is not a Frequent Flyer member</div>
+<div class="step successful">When she registers on the Frequent Flyer program</div>
+<div class="step successful">Then she should have a status of <span class="step parameter">Bronze</span></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Members should get status updates based on status points earned</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given a member has a status of &lt;initialStatus&gt;</div>
+<div class="step">And he has &lt;initialStatusPoints&gt; status points</div>
+<div class="step">When he earns &lt;extraPoints&gt; extra status points</div>
+<div class="step">Then he should have a status of &lt;finalStatus&gt;</div>
+<table>
+<thead>
+<tr>
+<th>initialStatus</th><th>initialStatusPoints</th><th>extraPoints</th><th>finalStatus</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Bronze</td><td>0</td><td>300</td><td>Silver</td></tr>
+<tr>
+<td>Silver</td><td>0</td><td>700</td><td>Gold</td></tr>
+<tr>
+<td>Gold</td><td>0</td><td>1500</td><td>Platinum</td></tr>
+<tr>
+<td>Bronze</td><td>200</td><td>99</td><td>Bronze</td></tr>
+<tr>
+<td>Bronze</td><td>200</td><td>100</td><td>Silver</td></tr>
+<tr>
+<td>Silver</td><td>600</td><td>99</td><td>Silver</td></tr>
+<tr>
+<td>Silver</td><td>600</td><td>100</td><td>Gold</td></tr>
+<tr>
+<td>Gold</td><td>1400</td><td>99</td><td>Gold</td></tr>
+<tr>
+<td>Gold</td><td>1400</td><td>100</td><td>Platinum</td></tr>
+<tr>
+<td>Platinum</td><td>2000</td><td>100</td><td>Platinum</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {initialStatus=Bronze, initialStatusPoints=0, extraPoints=300, finalStatus=Silver}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Bronze</span></div>
+<div class="step successful">And he has <span class="step parameter">0</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">300</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Silver</span></div>
+
+<h3 class="example">Example: {initialStatus=Silver, initialStatusPoints=0, extraPoints=700, finalStatus=Gold}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Silver</span></div>
+<div class="step successful">And he has <span class="step parameter">0</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">700</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Gold</span></div>
+
+<h3 class="example">Example: {initialStatus=Gold, initialStatusPoints=0, extraPoints=1500, finalStatus=Platinum}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Gold</span></div>
+<div class="step successful">And he has <span class="step parameter">0</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">1500</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Platinum</span></div>
+
+<h3 class="example">Example: {initialStatus=Bronze, initialStatusPoints=200, extraPoints=99, finalStatus=Bronze}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Bronze</span></div>
+<div class="step successful">And he has <span class="step parameter">200</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">99</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Bronze</span></div>
+
+<h3 class="example">Example: {initialStatus=Bronze, initialStatusPoints=200, extraPoints=100, finalStatus=Silver}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Bronze</span></div>
+<div class="step successful">And he has <span class="step parameter">200</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">100</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Silver</span></div>
+
+<h3 class="example">Example: {initialStatus=Silver, initialStatusPoints=600, extraPoints=99, finalStatus=Silver}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Silver</span></div>
+<div class="step successful">And he has <span class="step parameter">600</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">99</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Silver</span></div>
+
+<h3 class="example">Example: {initialStatus=Silver, initialStatusPoints=600, extraPoints=100, finalStatus=Gold}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Silver</span></div>
+<div class="step successful">And he has <span class="step parameter">600</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">100</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Gold</span></div>
+
+<h3 class="example">Example: {initialStatus=Gold, initialStatusPoints=1400, extraPoints=99, finalStatus=Gold}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Gold</span></div>
+<div class="step successful">And he has <span class="step parameter">1400</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">99</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Gold</span></div>
+
+<h3 class="example">Example: {initialStatus=Gold, initialStatusPoints=1400, extraPoints=100, finalStatus=Platinum}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Gold</span></div>
+<div class="step successful">And he has <span class="step parameter">1400</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">100</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Platinum</span></div>
+
+<h3 class="example">Example: {initialStatus=Platinum, initialStatusPoints=2000, extraPoints=100, finalStatus=Platinum}</h3>
+<div class="step successful">Given a member has a status of <span class="step parameter">Platinum</span></div>
+<div class="step successful">And he has <span class="step parameter">2000</span> status points</div>
+<div class="step successful">When he earns <span class="step parameter">100</span> extra status points</div>
+<div class="step successful">Then he should have a status of <span class="step parameter">Platinum</span></div>
+</div>
+</div>
+</div>

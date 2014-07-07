@@ -1,0 +1,33 @@
+<acceptance-test-run title="Filtering cities" name="Filtering cities" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2214" timestamp="2014-06-11T07:30:45.704+01:00">
+  <user-story id="booking_a_flight" name="Booking a flight" path="stories/flights/booking_a_flight.story"/>
+  <tags>
+    <tag name="Flights" type="capability"/>
+    <tag name="Booking a flight" type="story"/>
+  </tags>
+  <test-group name="Given I want to book a flight" result="SUCCESS">
+    <screenshots>
+      <screenshot image="959cde584ea244ac26e5963556600769_NONE900.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="606">
+      <screenshots>
+        <screenshot image="959cde584ea244ac26e5963556600769_NONE900.png"/>
+        <screenshot image="66621e4fd4c301df2bd7f1b8cbf31e6d_NONE900.png"/>
+      </screenshots>
+      <description>Navigate to flight bookings</description>
+    </test-step>
+  </test-group>
+  <test-step result="SUCCESS" duration="421">
+    <screenshots>
+      <screenshot image="66621e4fd4c301df2bd7f1b8cbf31e6d_NONE900.png"/>
+      <screenshot image="4129469bfad7d359d16a2c530bd1d505_NONE900.png"/>
+    </screenshots>
+    <description>When I enter &apos;Se&apos; into the &apos;from&apos; city field</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="786">
+    <screenshots>
+      <screenshot image="00d7079fb807173a2904be1276c87191_NONE900.png"/>
+      <screenshot image="0da59f8a399c9c11ae410505b356be4c_NONE900.png"/>
+    </screenshots>
+    <description>Then I should see the following cities: {Seattle, Seoul}</description>
+  </test-step>
+</acceptance-test-run>

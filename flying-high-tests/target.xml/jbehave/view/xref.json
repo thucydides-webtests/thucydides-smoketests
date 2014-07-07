@@ -1,0 +1,143 @@
+{"xref": {
+  "whenMade": 1402468250081,
+  "createdBy": "JBehave",
+  "metaFilter": "-skip -ignore",
+  "meta": [
+    "earning-points=",
+    "status-points=",
+    "iteration-1="
+  ],
+  "stories": [
+    {
+      "description": "Earning Frequent Flyer points from flights",
+      "narrative": "",
+      "name": "earning_points_from_flights.story",
+      "path": "stories/earning_points/earning_points_from_flights.story",
+      "html": "stories.earning_points.earning_points_from_flights.html",
+      "meta": "earning-points=\u000a",
+      "scenarios": "Scenario:Earning standard points from an Economy flight\u000aNormal flights earn 1 point every 2 kilometers\u000aGiven the flying distance between Sydney and Melbourne is 878 km\u000aAnd I am a Bronze Frequent Flyer member\u000aWhen I fly from Sydney to Melbourne on 10/10/2014\u000aThen I should earn 439 points\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468222445,
+      "duration": 328
+    },
+    {
+      "description": "Logging on to the 'My Flying High' web site",
+      "narrative": "",
+      "name": "logging_on.story",
+      "path": "stories/authentication/logging_on.story",
+      "html": "stories.authentication.logging_on.html",
+      "meta": "iteration-1=\u000a",
+      "scenarios": "Scenario:Logging on successfully\u000aWhen Joe logs on with password 'secret'\u000aThen he should be given access to the site\u000a\u000a\u000aScenario:Logging on with an incorrect password\u000aWhen Joe logs on with password 'wrong'\u000aThen he should be informed that his password was incorrect\u000a\u000a\u000aScenario:Logging on with an expired account\u000aGiven the account has expired\u000aWhen Joe logs on with password 'wrong'\u000aThen he should be informed that his account has expired\u000aAnd he should be invited to renew his account\u000a\u000a\u000a",
+      "passed": false,
+      "pending": false,
+      "started": 1402468222780,
+      "duration": 328
+    },
+    {
+      "description": "Earning extra points from Frequent Flyer status",
+      "narrative": "",
+      "name": "earning_extra_points_from_status.story",
+      "path": "stories/earning_points/earning_extra_points_from_status.story",
+      "html": "stories.earning_points.earning_extra_points_from_status.html",
+      "meta": "earning-points=\u000a",
+      "scenarios": "Scenario:Earning points on flights by Frequent Flyer status\u000aGiven a member has a status of <initialStatus>\u000aWhen I fly on a flight that is worth <base> base points\u000aThen I should earn a status bonus of <bonus>\u000aAnd I should have guaranteed minimum earned points per trip of <minimum>\u000aAnd I should earn <total> points in all\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468223119,
+      "duration": 294
+    },
+    {
+      "description": "Booking a flight",
+      "narrative": "In order to encourage travellers to travel more\u000aAs a n airline\u000aI want to show travellers exciting destinations when they log on\u000a",
+      "name": "show_featured_destinations.story",
+      "path": "stories/marketing/show_featured_destinations.story",
+      "html": "stories.marketing.show_featured_destinations.html",
+      "meta": "",
+      "scenarios": "Scenario:Displaying featured destinations\u000aGiven Jane has logged on\u000aWhen Jane views the home page\u000aThen she should see 3 featured destinations\u000aAnd the featured destinations should include Singapore costing 900\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468223421,
+      "duration": 9850
+    },
+    {
+      "description": "User Authentication",
+      "narrative": "",
+      "name": "user_authentication.story",
+      "path": "stories/authentication/user_authentication.story",
+      "html": "stories.authentication.user_authentication.html",
+      "meta": "",
+      "scenarios": "Scenario:Successful authentication\u000aGiven Jane is a registered Frequent Flyer\u000aWhen Jane authenticates with a valid email address and password\u000aThen Jane should be given access to her account\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468233914,
+      "duration": 5366
+    },
+    {
+      "description": "",
+      "narrative": "",
+      "name": "displaying_flight_details.story",
+      "path": "stories/viewing_flights/displaying_flight_details.story",
+      "html": "stories.viewing_flights.displaying_flight_details.html",
+      "meta": "",
+      "scenarios": "Scenario:Find flight details by flight number\u000aGiven I need to know the details of flight number FH-101\u000aWhen I request the details about this flight\u000aThen I should receive the following:\u000a| flightNumber | departure | destination  | time   |\u000a| FH-101       | MEL       | SYD          | 06:00  |\u000a\u000a\u000aScenario:Find international flight details by flight number\u000aGiven I need to know the details of flight number FH-102\u000aWhen I request the details about this flight\u000aThen I should receive the following:\u000a| flightNumber | departure | destination  | time   |\u000a| FH-102       | SYD       | HKG          | 11:55  |\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468239929,
+      "duration": 55
+    },
+    {
+      "description": "Earning Frequent Flyer points from purchases",
+      "narrative": "",
+      "name": "earning_points_from_purchases.story",
+      "path": "stories/earning_points/earning_points_from_purchases.story",
+      "html": "stories.earning_points.earning_points_from_purchases.html",
+      "meta": "earning-points=\u000a",
+      "scenarios": "Scenario:Earning points from credit card purchases\u000aGiven pending\u000aWhen pending\u000aThen pending\u000a\u000a\u000aScenario:Earning points from purchases with partners\u000aGiven we can earn points with partners\u000aAnd the flying distance between Sydney and Melbourne is 878 km\u000aAnd I am a Bronze Frequent Flyer member\u000aWhen I fly from Sydney to Melbourne on 10/10/2014\u000aThen I should earn 439 points\u000a\u000a\u000a",
+      "passed": true,
+      "pending": true,
+      "started": 1402468239989,
+      "duration": 59
+    },
+    {
+      "description": "Earning Frequent Flyer points from special offers",
+      "narrative": "",
+      "name": "earning_points_from_special_offers.story",
+      "path": "stories/earning_points/earning_points_from_special_offers.story",
+      "html": "stories.earning_points.earning_points_from_special_offers.html",
+      "meta": "earning-points=\u000a",
+      "scenarios": "Scenario:Earning points from partner promotions\u000aGiven pending\u000aWhen pending\u000aThen pending\u000a\u000a\u000aScenario:Earning points from hotel packages\u000aGiven pending\u000aWhen pending\u000aThen pending\u000a\u000a\u000aScenario:Earning points from car rental packages\u000aGiven pending\u000aWhen pending\u000aThen pending\u000a\u000a\u000a",
+      "passed": true,
+      "pending": true,
+      "started": 1402468240053,
+      "duration": 84
+    },
+    {
+      "description": "Frequent Flyer status is calculated based on points",
+      "narrative": "",
+      "name": "calculating_status_based_on_points.story",
+      "path": "stories/status/calculating_status_based_on_points.story",
+      "html": "stories.status.calculating_status_based_on_points.html",
+      "meta": "status-points=\u000a",
+      "scenarios": "Scenario:New members should start out as Bronze members\u000aGiven Jill Smith is not a Frequent Flyer member\u000aWhen she registers on the Frequent Flyer program\u000aThen she should have a status of Bronze\u000a\u000a\u000aScenario:Members should get status updates based on status points earned\u000aGiven a member has a status of <initialStatus>\u000aAnd he has <initialStatusPoints> status points\u000aWhen he earns <extraPoints> extra status points\u000aThen he should have a status of <finalStatus>\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468240142,
+      "duration": 334
+    },
+    {
+      "description": "Booking a flight",
+      "narrative": "In order to travel to my destination\u000aAs a traveller\u000aI want to be able to book a flight online\u000a",
+      "name": "booking_a_flight.story",
+      "path": "stories/flights/booking_a_flight.story",
+      "html": "stories.flights.booking_a_flight.html",
+      "meta": "",
+      "scenarios": "Scenario:Viewing available flights\u000aGiven I want to book a flight\u000aWhen I search for return flights from Sydney to London in Business\u000aThen I should see the list of all available flights\u000a\u000a\u000aScenario:Filtering cities\u000aGiven I want to book a flight\u000aWhen I enter 'Se' into the 'from' city field\u000aThen I should see the following cities: Seattle, Seoul\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1402468240481,
+      "duration": 7439
+    }
+  ],
+  "stepMatches": []
+}}

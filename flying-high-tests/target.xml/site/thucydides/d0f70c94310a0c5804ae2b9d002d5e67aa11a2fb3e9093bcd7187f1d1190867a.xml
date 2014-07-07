@@ -1,0 +1,21 @@
+<acceptance-test-run title="Should see featured destinations" name="should_see_featured_destinations" steps="2" successful="2" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="4344" timestamp="2014-06-11T07:30:50.169+01:00">
+  <user-story id="com.bddinaction.flyinghigh.Application.ViewingFlights.displaying_flight_details" name="Displaying flight details" path="com.bddinaction.flyinghigh.Application.ViewingFlights">
+    <feature id="com.bddinaction.flyinghigh.Application.ViewingFlights" name="Viewing flights"/>
+  </user-story>
+  <tags>
+    <tag name="Viewing flights" type="feature"/>
+    <tag name="Displaying flight details" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="3304">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <description>Enter email and password for: &lt;span class=&apos;step-parameter&apos;&gt;Jane&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1040">
+    <screenshots>
+      <screenshot image="9d1731a37f26a4e9c743b332cbd6c890_NONE900.png"/>
+    </screenshots>
+    <description>Should see featured destinations: &lt;span class=&apos;step-parameter&apos;&gt;3&lt;/span&gt;</description>
+  </test-step>
+</acceptance-test-run>

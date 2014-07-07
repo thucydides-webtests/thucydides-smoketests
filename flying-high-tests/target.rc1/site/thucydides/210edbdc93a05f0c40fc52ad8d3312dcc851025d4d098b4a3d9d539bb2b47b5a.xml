@@ -1,0 +1,20 @@
+<acceptance-test-run title="New members should start out as Bronze members" name="New members should start out as Bronze members" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="28" timestamp="2014-06-29T13:07:29.970+10:00">
+  <user-story id="calculating_status_based_on_points" name="Calculating status based on points" path="stories/status/calculating_status_based_on_points.story"/>
+  <issues>
+    <issue>FH-17</issue>
+  </issues>
+  <tags>
+    <tag name="Earning Points" type="Epic"/>
+    <tag name="ui" type="component"/>
+    <tag name="Calculating status based on points" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="2">
+    <description>Given {Jill} {Smith} is not a Frequent Flyer member</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2">
+    <description>When she registers on the Frequent Flyer program</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="13">
+    <description>Then she should have a status of {Bronze}</description>
+  </test-step>
+</acceptance-test-run>

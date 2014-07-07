@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>stories.marketing.show_featured_destinations</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Showing featured destinations</h1>
+<div class="path">stories/marketing/show_featured_destinations.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@issue FH-21</div>
+<div class="property">@tag component:ui</div>
+</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> encourage travellers to travel more</div>
+<div class="element asA"><span class="keyword asA">As a</span> n airline</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> show travellers exciting destinations when they log on
+
+Meta:
+@tag component:ui
+@issue FH-21</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Displaying featured destinations</h2>
+<div class="step failed">Given <span class="step parameter">Jane</span> has logged on <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver</span></div>
+<div class="step notPerformed">When Jane views the home page <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then she should see <span class="step parameter">3</span> featured destinations <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">And the featured destinations should include <span class="step parameter">Singapore</span> costing <span class="step parameter">900</span> <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps.enterEmailAndPasswordFor(AuthenticationFlowSteps.java:17)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.CGLIB$enterEmailAndPasswordFor$1(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd$$FastClassByCGLIB$$e74f7a86.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.AuthenticationFlowSteps$$EnhancerByCGLIB$$9ae594cd.enterEmailAndPasswordFor(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps.aUserHasLoggedOnAs(UserAuthenticationSteps.java:32)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: Viewing available flights</h2>
+<div class="step failed">Given I want to book a flight <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver</span></div>
+<div class="step notPerformed">When I search for <span class="step parameter">return</span> flights from <span class="step parameter">Sydney</span> to <span class="step parameter">London</span> in <span class="step parameter">Business</span> <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div class="step notPerformed">Then I should see the list of all available flights <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:91)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:82)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:54)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:123)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:118)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:732)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:642)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:630)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps.navigateToFlightBookings(TravellerFlowSteps.java:18)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.CGLIB$navigateToFlightBookings$0(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e$$FastClassByCGLIB$$7446f886.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:285)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:261)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:125)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:51)
+	at com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps$$EnhancerByCGLIB$$7363dd7e.navigateToFlightBookings(&lt;generated&gt;)
+	at com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps.givenIWantToBookAFlight(BookingAFlightSteps.java:21)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+...</pre>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

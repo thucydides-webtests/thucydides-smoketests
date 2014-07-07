@@ -1,0 +1,93 @@
+{
+  "name" : "another_happy_day_scenario",
+  "testCaseName" : "com.bddinaction.flyinghigh.junit.WhenResettingPasswords",
+  "testSteps" : [ {
+    "number" : 1,
+    "description" : "Step with parameters: <span class='step-parameter'>a, 1</span>",
+    "duration" : 14,
+    "startTime" : 1404011371007,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 2,
+    "description" : "Step with parameters: <span class='step-parameter'>B, 2</span>",
+    "duration" : 2,
+    "startTime" : 1404011371029,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 3,
+    "description" : "Step with parameters: <span class='step-parameter'>c, 3</span>",
+    "duration" : 3,
+    "startTime" : 1404011371039,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 4,
+    "description" : "Step with parameters: <span class='step-parameter'>D, 4</span>",
+    "duration" : 2,
+    "startTime" : 1404011371048,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 5,
+    "description" : "Step with parameters: <span class='step-parameter'>e, 5</span>",
+    "duration" : 2,
+    "startTime" : 1404011371054,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 6,
+    "description" : "Step with parameters: <span class='step-parameter'>F, 6</span>",
+    "duration" : 2,
+    "startTime" : 1404011371062,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 7,
+    "description" : "Step with parameters: <span class='step-parameter'>g, 7</span>",
+    "duration" : 2,
+    "startTime" : 1404011371073,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 8,
+    "description" : "Step with parameters: <span class='step-parameter'>h, 8</span>",
+    "duration" : 3,
+    "startTime" : 1404011371082,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 9,
+    "description" : "Step with parameters: <span class='step-parameter'>i, 9</span>",
+    "duration" : 2,
+    "startTime" : 1404011371090,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 10,
+    "description" : "Step with parameters: <span class='step-parameter'>j, 10</span>",
+    "duration" : 3,
+    "startTime" : 1404011371098,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 11,
+    "description" : "Step with parameters: <span class='step-parameter'>k, 11</span>",
+    "duration" : 2,
+    "startTime" : 1404011371105,
+    "result" : "SUCCESS"
+  }, {
+    "number" : 12,
+    "description" : "Step with parameters: <span class='step-parameter'>l, 12</span>",
+    "duration" : 3,
+    "startTime" : 1404011371112,
+    "result" : "SUCCESS"
+  } ],
+  "userStory" : {
+    "id" : "com.bddinaction.flyinghigh.junit.WhenResettingPasswords",
+    "storyName" : "When resetting passwords",
+    "storyClassName" : "com.bddinaction.flyinghigh.junit.WhenResettingPasswords",
+    "path" : "com.bddinaction.flyinghigh.junit"
+  },
+  "title" : "Another happy day scenario [a/1]",
+  "tags" : [ {
+    "name" : "When resetting passwords",
+    "type" : "story"
+  } ],
+  "startTime" : 1404011371006,
+  "duration" : 15,
+  "qualifier" : "a/1",
+  "manual" : false,
+  "result" : "SUCCESS"
+}

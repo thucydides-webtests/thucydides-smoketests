@@ -1,0 +1,16 @@
+<acceptance-test-run title="Earning points from credit card purchases" name="Earning points from credit card purchases" steps="3" successful="0" failures="0" skipped="0" ignored="0" pending="3" result="PENDING" duration="21" timestamp="2014-06-11T07:30:39.991+01:00">
+  <user-story id="earning_points_from_purchases" name="Earning points from purchases" path="stories/earning_points/earning_points_from_purchases.story"/>
+  <tags>
+    <tag name="Earning points" type="capability"/>
+    <tag name="Earning points from purchases" type="story"/>
+  </tags>
+  <test-step result="PENDING" duration="0">
+    <description>Given pending</description>
+  </test-step>
+  <test-step result="PENDING" duration="1">
+    <description>When pending</description>
+  </test-step>
+  <test-step result="PENDING" duration="0">
+    <description>Then pending</description>
+  </test-step>
+</acceptance-test-run>

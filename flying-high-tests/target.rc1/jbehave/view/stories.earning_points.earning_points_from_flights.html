@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>stories.earning_points.earning_points_from_flights</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Earning Frequent Flyer points from flights</h1>
+<div class="path">stories/earning_points/earning_points_from_flights.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@earning-points </div>
+<div class="property">@issue FH-1,FH-12</div>
+<div class="property">@tag component:backend</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Earning standard points from an Economy flight
+Normal flights earn 1 point every 2 kilometers</h2>
+<div class="step successful">Given the flying distance between <span class="step parameter">Sydney</span> and <span class="step parameter">Melbourne</span> is <span class="step parameter">878</span> km</div>
+<div class="step successful">And I am a <span class="step parameter">Bronze</span> Frequent Flyer member</div>
+<div class="step successful">When I fly from <span class="step parameter">Sydney</span> to <span class="step parameter">Melbourne</span> on <span class="step parameter">10/10/2014</span></div>
+<div class="step successful">Then I should earn <span class="step parameter">439</span> points</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,274 @@
+<xref>
+  <whenMade>1402468250081</whenMade>
+  <createdBy>JBehave</createdBy>
+  <metaFilter>-skip -ignore</metaFilter>
+  <meta>
+    <string>earning-points=</string>
+    <string>status-points=</string>
+    <string>iteration-1=</string>
+  </meta>
+  <stories>
+    <story>
+      <description>Earning Frequent Flyer points from flights</description>
+      <narrative></narrative>
+      <name>earning_points_from_flights.story</name>
+      <path>stories/earning_points/earning_points_from_flights.story</path>
+      <html>stories.earning_points.earning_points_from_flights.html</html>
+      <meta>earning-points=
+</meta>
+      <scenarios>Scenario:Earning standard points from an Economy flight
+Normal flights earn 1 point every 2 kilometers
+Given the flying distance between Sydney and Melbourne is 878 km
+And I am a Bronze Frequent Flyer member
+When I fly from Sydney to Melbourne on 10/10/2014
+Then I should earn 439 points
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468222445</started>
+      <duration>328</duration>
+    </story>
+    <story>
+      <description>Logging on to the &apos;My Flying High&apos; web site</description>
+      <narrative></narrative>
+      <name>logging_on.story</name>
+      <path>stories/authentication/logging_on.story</path>
+      <html>stories.authentication.logging_on.html</html>
+      <meta>iteration-1=
+</meta>
+      <scenarios>Scenario:Logging on successfully
+When Joe logs on with password &apos;secret&apos;
+Then he should be given access to the site
+
+
+Scenario:Logging on with an incorrect password
+When Joe logs on with password &apos;wrong&apos;
+Then he should be informed that his password was incorrect
+
+
+Scenario:Logging on with an expired account
+Given the account has expired
+When Joe logs on with password &apos;wrong&apos;
+Then he should be informed that his account has expired
+And he should be invited to renew his account
+
+
+</scenarios>
+      <passed>false</passed>
+      <pending>false</pending>
+      <started>1402468222780</started>
+      <duration>328</duration>
+    </story>
+    <story>
+      <description>Earning extra points from Frequent Flyer status</description>
+      <narrative></narrative>
+      <name>earning_extra_points_from_status.story</name>
+      <path>stories/earning_points/earning_extra_points_from_status.story</path>
+      <html>stories.earning_points.earning_extra_points_from_status.html</html>
+      <meta>earning-points=
+</meta>
+      <scenarios>Scenario:Earning points on flights by Frequent Flyer status
+Given a member has a status of &lt;initialStatus&gt;
+When I fly on a flight that is worth &lt;base&gt; base points
+Then I should earn a status bonus of &lt;bonus&gt;
+And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;
+And I should earn &lt;total&gt; points in all
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468223119</started>
+      <duration>294</duration>
+    </story>
+    <story>
+      <description>Booking a flight</description>
+      <narrative>In order to encourage travellers to travel more
+As a n airline
+I want to show travellers exciting destinations when they log on
+</narrative>
+      <name>show_featured_destinations.story</name>
+      <path>stories/marketing/show_featured_destinations.story</path>
+      <html>stories.marketing.show_featured_destinations.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Displaying featured destinations
+Given Jane has logged on
+When Jane views the home page
+Then she should see 3 featured destinations
+And the featured destinations should include Singapore costing 900
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468223421</started>
+      <duration>9850</duration>
+    </story>
+    <story>
+      <description>User Authentication</description>
+      <narrative></narrative>
+      <name>user_authentication.story</name>
+      <path>stories/authentication/user_authentication.story</path>
+      <html>stories.authentication.user_authentication.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Successful authentication
+Given Jane is a registered Frequent Flyer
+When Jane authenticates with a valid email address and password
+Then Jane should be given access to her account
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468233914</started>
+      <duration>5366</duration>
+    </story>
+    <story>
+      <description></description>
+      <narrative></narrative>
+      <name>displaying_flight_details.story</name>
+      <path>stories/viewing_flights/displaying_flight_details.story</path>
+      <html>stories.viewing_flights.displaying_flight_details.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Find flight details by flight number
+Given I need to know the details of flight number FH-101
+When I request the details about this flight
+Then I should receive the following:
+| flightNumber | departure | destination  | time   |
+| FH-101       | MEL       | SYD          | 06:00  |
+
+
+Scenario:Find international flight details by flight number
+Given I need to know the details of flight number FH-102
+When I request the details about this flight
+Then I should receive the following:
+| flightNumber | departure | destination  | time   |
+| FH-102       | SYD       | HKG          | 11:55  |
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468239929</started>
+      <duration>55</duration>
+    </story>
+    <story>
+      <description>Earning Frequent Flyer points from purchases</description>
+      <narrative></narrative>
+      <name>earning_points_from_purchases.story</name>
+      <path>stories/earning_points/earning_points_from_purchases.story</path>
+      <html>stories.earning_points.earning_points_from_purchases.html</html>
+      <meta>earning-points=
+</meta>
+      <scenarios>Scenario:Earning points from credit card purchases
+Given pending
+When pending
+Then pending
+
+
+Scenario:Earning points from purchases with partners
+Given we can earn points with partners
+And the flying distance between Sydney and Melbourne is 878 km
+And I am a Bronze Frequent Flyer member
+When I fly from Sydney to Melbourne on 10/10/2014
+Then I should earn 439 points
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>true</pending>
+      <started>1402468239989</started>
+      <duration>59</duration>
+    </story>
+    <story>
+      <description>Earning Frequent Flyer points from special offers</description>
+      <narrative></narrative>
+      <name>earning_points_from_special_offers.story</name>
+      <path>stories/earning_points/earning_points_from_special_offers.story</path>
+      <html>stories.earning_points.earning_points_from_special_offers.html</html>
+      <meta>earning-points=
+</meta>
+      <scenarios>Scenario:Earning points from partner promotions
+Given pending
+When pending
+Then pending
+
+
+Scenario:Earning points from hotel packages
+Given pending
+When pending
+Then pending
+
+
+Scenario:Earning points from car rental packages
+Given pending
+When pending
+Then pending
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>true</pending>
+      <started>1402468240053</started>
+      <duration>84</duration>
+    </story>
+    <story>
+      <description>Frequent Flyer status is calculated based on points</description>
+      <narrative></narrative>
+      <name>calculating_status_based_on_points.story</name>
+      <path>stories/status/calculating_status_based_on_points.story</path>
+      <html>stories.status.calculating_status_based_on_points.html</html>
+      <meta>status-points=
+</meta>
+      <scenarios>Scenario:New members should start out as Bronze members
+Given Jill Smith is not a Frequent Flyer member
+When she registers on the Frequent Flyer program
+Then she should have a status of Bronze
+
+
+Scenario:Members should get status updates based on status points earned
+Given a member has a status of &lt;initialStatus&gt;
+And he has &lt;initialStatusPoints&gt; status points
+When he earns &lt;extraPoints&gt; extra status points
+Then he should have a status of &lt;finalStatus&gt;
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468240142</started>
+      <duration>334</duration>
+    </story>
+    <story>
+      <description>Booking a flight</description>
+      <narrative>In order to travel to my destination
+As a traveller
+I want to be able to book a flight online
+</narrative>
+      <name>booking_a_flight.story</name>
+      <path>stories/flights/booking_a_flight.story</path>
+      <html>stories.flights.booking_a_flight.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Viewing available flights
+Given I want to book a flight
+When I search for return flights from Sydney to London in Business
+Then I should see the list of all available flights
+
+
+Scenario:Filtering cities
+Given I want to book a flight
+When I enter &apos;Se&apos; into the &apos;from&apos; city field
+Then I should see the following cities: Seattle, Seoul
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1402468240481</started>
+      <duration>7439</duration>
+    </story>
+  </stories>
+  <stepMatches/>
+</xref>

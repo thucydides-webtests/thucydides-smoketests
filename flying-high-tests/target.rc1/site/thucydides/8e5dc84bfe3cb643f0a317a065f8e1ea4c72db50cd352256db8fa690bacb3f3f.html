@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Iteration 1.1</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css"/>
+
+    <!--[if IE]>
+    <script language="javascript" type="text/javascript" src="jit/Extras/excanvas.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+
+    <link type="text/css" href="jqueryui/css/start/jquery-ui-1.8.18.custom.css" rel="Stylesheet"/>
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+    <script src="jqtree/tree.jquery.js"></script>
+    <link rel="stylesheet" href="jqtree/jqtree.css">
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/core.css"/>
+    <link rel="stylesheet" href="css/link.css"/>
+    <link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+            // Results table
+            $('#req-results-table').dataTable({
+                "aaSorting": [
+                    [ 2, "asc" ]
+                ],
+                "iDisplayLength": 25,
+                "bJQueryUI": true
+            });
+
+            // Results table
+            $('#release-test-results-table').dataTable({
+                "aaSorting": [
+                    [ 2, "asc" ]
+                ],
+                "bJQueryUI": true
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/logo.jpg" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="bluetext"><a href="releases.html" class="bluetext">Releases</a>
+                >&nbsp<a href="5c2ec3497821f4f23d865a2ff33fe12563fbc80d44661a7ba83f78f34d37a1a5.html">Release 1.0</a>
+                >
+            Iteration 1.1
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div class="menu">
+    <ul>
+        <li><a href="index.html" >Overall Test Results</a></li>
+        <li><a href="capabilities.html" >Requirements</a></li>
+        <li><a href="releases.html" class="current">Releases</a></li>
+        <li><a href="0272dadd83d6e6ac748d9a947522ca78b8873f5156f9bd38d6a0eb735ee5993b.html" >Epics</a></li>
+        <li><a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html" >Stories</a></li>
+    </ul>
+    <span class="date-and-time">Report generated 29-06-2014 13:10</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+            <div id="tabs">
+                <div id="releases">
+                    <h3>Release Details</h3>
+                    <table>
+                        <tr>
+                            <td valign="top"><a class="label" href="releases.html">Releases</a></td>
+                            <td valign="top">
+                                >&nbsp<a class="label" href="5c2ec3497821f4f23d865a2ff33fe12563fbc80d44661a7ba83f78f34d37a1a5.html">Release 1.0</a>
+                                &nbsp:
+                            </td>
+                            <td class="release-context-tree">
+                                <div id="release-tree"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <script>
+                        var releaseData = [
+  {
+    "releaseTag": {
+      "name": "Iteration 1.1",
+      "type": "version"
+    },
+    "children": [],
+    "label": "Iteration 1.1",
+    "reportName": "8e5dc84bfe3cb643f0a317a065f8e1ea4c72db50cd352256db8fa690bacb3f3f.html",
+    "parents": [
+      {
+        "releaseTag": {
+          "name": "Release 1.0",
+          "type": "version"
+        },
+        "children": [],
+        "label": "Release 1.0",
+        "reportName": "5c2ec3497821f4f23d865a2ff33fe12563fbc80d44661a7ba83f78f34d37a1a5.html",
+        "parents": []
+      }
+    ]
+  }
+];
+                        $(function () {
+                            $('#release-tree').tree({
+                                data: releaseData
+                            });
+                        });
+
+                        $('#release-tree').bind(
+                                'tree.click',
+                                function (event) {
+                                    window.location.href = event.node.reportName;
+                                }
+                        );
+
+                    </script>
+
+                    <div>
+                    </div>
+
+                    <div id="release-coverage">
+                        <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+                            <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                                <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active requirementTitle">
+                                    <a href="#tabs-1">Scheduled Requirements</a></li>
+                            </ul>
+                            <!----->
+
+                            <div id="tabs-1" class="capabilities-table">
+                                <div id="req_list_tests" class="table">
+                                    <div class="test-results">
+                                        <table id="req-results-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="40" class="test-results-heading">&nbsp;</th>
+                                                    <th width="500" class="test-results-heading">Epics</th>
+                                                <th class="test-results-heading" width="50px">Total.<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="50px">Auto.<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-check icon-large"
+                                                        title="Tests passed (automated)"></i></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-ban-circle icon-large"
+                                                        title="Tests skipped or pending (automated)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-thumbs-down icon-large"
+                                                        title="Tests failed (automated)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-exclamation-sign icon-large"
+                                                        title="Tests failed with an error (automated)"></th>
+                                                <th class="test-results-heading" width="50">Manual<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-check icon-large" title="Tests passed (manual)"></i>
+                                                </th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-ban-circle icon-large"
+                                                        title="Tests skipped or pending (manual)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-thumbs-down icon-large"
+                                                        title="Tests failed (manual)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-exclamation-sign icon-large"
+                                                        title="Tests failed with an error (manual)"></th>
+                                            </tr>
+                                            <tbody>
+
+
+                                            <tr class="test-SUCCESS requirementRow">
+                                                <td class="requirementRowCell">
+                                                    <img src="images/traffic-green.gif" class="summary-icon"
+                                                         title="SUCCESS"/>
+                                                    <span style="display:none">3</span>
+                                                </td>
+                                                <td class="release-title">
+                                                    <a href="4ea735c2cbfa89ddbf41f73dfcb08cced3813bed18155d2c080ea2561e591d70.html">Marketing flights</a>
+                                                </td>
+
+
+
+
+
+
+
+                                                <td class="greentext highlighted-value">2</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext highlighted-value">2</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext">2</td>
+                                                <td class="bluetext">0</td>
+                                                <td class="redtext">0</td>
+                                                <td class="lightorangetext">0</td>
+                                                    <td class="bluetext highlighted-value">0</td>
+                                                    <td class="bluetext">0%  </td>
+                                                    <td class="greentext">0</td>
+                                                    <td class="bluetext">0</td>
+                                                    <td class="redtext">0</td>
+                                                    <td class="lightorangetext">0</td>
+                                            </tr>
+
+                                            <tr class="test-ERROR requirementRow">
+                                                <td class="requirementRowCell">
+                                                    <img src="images/traffic-orange.gif" class="summary-icon"
+                                                         title="ERROR"/>
+                                                    <span style="display:none">1</span>
+                                                </td>
+                                                <td class="release-title">
+                                                    <a href="cae05dd461d9c6bb3b211d41c5d9b3fce4dba5d008579c16263873c6bff302a5.html">Authentication</a>
+                                                </td>
+
+
+
+
+
+
+
+                                                <td class="redtext highlighted-value">5</td>
+                                                <td class="redtext">40% </td>
+                                                <td class="redtext highlighted-value">5</td>
+                                                <td class="redtext">40% </td>
+                                                <td class="greentext">2</td>
+                                                <td class="bluetext">0</td>
+                                                <td class="redtext">1</td>
+                                                <td class="lightorangetext">2</td>
+                                                    <td class="bluetext highlighted-value">0</td>
+                                                    <td class="bluetext">0%  </td>
+                                                    <td class="greentext">0</td>
+                                                    <td class="bluetext">0</td>
+                                                    <td class="redtext">0</td>
+                                                    <td class="lightorangetext">0</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----->
+
+                            <div id="test-tabs">
+                                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active requirementTitle">
+                                        <a href="#test-tabs-1">Tests (4)</a>
+                                    </li>
+                                </ul>
+                                <div id="test_list_tests" class="table">
+                                    <div class="test-results">
+                                        <table id="release-test-results-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="30" class="test-results-heading">&nbsp;</th>
+                                                <th width="%" class="test-results-heading">Tests</th>
+                                                <th width="70" class="test-results-heading">Steps</th>
+                                                <th width="65" class="test-results-heading">Stable</th>
+                                                <th width="100" class="test-results-heading">Duration<br>(seconds)</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                                <tr class="test-SUCCESS">
+                                                    <td><img src="images/success.png" title="SUCCESS" class="summary-icon"/><span style="display:none">SUCCESS</span></td>
+                                                    <td class="SUCCESS-text"><a href="e60b342856f658a3872e2b0ea01385b2fa13a6ddf7f4bb60c72695c80b515766.html">Logging on successfully (<a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-7">FH-7</a>)</a></td>
+
+                                                    <td class="lightgreentext">5</td>
+                                                    <td class="bluetext">
+                                                        <img src="images/traffic-in-progress.gif"
+                                                             title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                                             class="summary-icon"/>
+                                                        <span style="display:none">0</span>
+                                                    </td>
+                                                    <td class="lightgreentext">0.08</td>
+                                                </tr>
+
+
+                                                <tr class="test-ERROR">
+                                                    <td><img src="images/cross.png" title="ERROR" class="summary-icon"/><span style="display:none">ERROR</span></td>
+                                                    <td class="ERROR-text"><a href="2a3b10e3daf8eaddea90b9b82fbeb7bb8c60d582add79fc2b337accceb398018.html">Logging on with an expired account (<a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-7">FH-7</a>)</a></td>
+
+                                                    <td class="lightgreentext">7</td>
+                                                    <td class="bluetext">
+                                                        <img src="images/traffic-in-progress.gif"
+                                                             title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                                             class="summary-icon"/>
+                                                        <span style="display:none">0</span>
+                                                    </td>
+                                                    <td class="lightgreentext">0.06</td>
+                                                </tr>
+
+
+                                                <tr class="test-FAILURE">
+                                                    <td><img src="images/fail.png" title="FAILURE" class="summary-icon"/><span style="display:none">FAILURE</span></td>
+                                                    <td class="FAILURE-text"><a href="eecd3f381404c0df7532505a31f11d22c87ecd27711e734a6c3ae8face4fbbbe.html">Logging on with an incorrect password (<a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-7">FH-7</a>)</a></td>
+
+                                                    <td class="lightgreentext">5</td>
+                                                    <td class="bluetext">
+                                                        <img src="images/traffic-in-progress.gif"
+                                                             title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                                             class="summary-icon"/>
+                                                        <span style="display:none">0</span>
+                                                    </td>
+                                                    <td class="lightgreentext">0.08</td>
+                                                </tr>
+
+
+                                                <tr class="test-ERROR">
+                                                    <td><img src="images/cross.png" title="ERROR" class="summary-icon"/><span style="display:none">ERROR</span></td>
+                                                    <td class="ERROR-text"><a href="5acec7fa80c9714651e18872166d94ca1d167053b5bc26f9489cc26ebbf378e1.html">Successful authentication (<a target="_blank" href="https://wakaleo.atlassian.net/browse/FH-7">FH-7</a>)</a></td>
+
+                                                    <td class="lightgreentext">4</td>
+                                                    <td class="bluetext">
+                                                        <img src="images/traffic-in-progress.gif"
+                                                             title="Over the last 0 tests: 0 passed, 0 failed, 0 pending"
+                                                             class="summary-icon"/>
+                                                        <span style="display:none">0</span>
+                                                    </td>
+                                                    <td class="lightgreentext">45.76</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+    <div id="bottomfooter">
+        <span class="version">Thucydides version 0.9.255-SNAPSHOT - Build UNKNOWN</span>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<acceptance-test-run title="Display international flight details by flight number" name="Display international flight details by flight number" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="16" timestamp="2014-06-29T13:07:24.400+10:00">
+  <user-story id="displaying_flight_details" name="Displaying flight details" path="stories/viewing_flights/displaying_flight_details.story"/>
+  <issues>
+    <issue>FH-18</issue>
+  </issues>
+  <tags>
+    <tag name="Book a flight on the Flying High site" type="Epic"/>
+    <tag name="ui" type="component"/>
+    <tag name="Displaying flight details" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="1">
+    <description>Given I need to know the details of flight number {FH-102}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="0">
+    <description>When I request the details about this flight</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1">
+    <description>Then I should receive the following:
+［| flightNumber | departure | destination  | time   |
+| FH-102       | SYD       | HKG          | 11:55  |］</description>
+  </test-step>
+</acceptance-test-run>

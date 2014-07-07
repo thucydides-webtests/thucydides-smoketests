@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Logging on","Logging on successfully","SUCCESS","2014-06-11T07:30:22.784+01:00","0.0","0.09"
+"Logging on","Logging on with an expired account","ERROR","2014-06-11T07:30:23.001+01:00","0.0","0.1"
+"Logging on","Logging on with an incorrect password","FAILURE","2014-06-11T07:30:22.880+01:00","0.0","0.12"

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="146" failures="1" name="com.bddinaction.flyinghigh.jbehave.AcceptanceTestSuite" time="28.539" errors="1" skipped="15">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.0-b70"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/john/Projects/OpenSource/thucydides/smoketests/flying-high-tests"/>
+    <property name="java.runtime.version" value="1.8.0-b132"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/z0/4r1wkhdx48j5kd1k5nql6yxm0000gp/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Library/Maven/current/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/john/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.3"/>
+    <property name="user.home" value="/Users/john"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="john"/>
+    <property name="java.class.path" value="/Library/Maven/current/boot/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0"/>
+    <property name="java.ext.dirs" value="/Users/john/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Library/Maven/current"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="java.lang.Object" name="BeforeStories" time="0.01"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Given the flying distance between Sydney and Melbourne is 878 km" time="0.028"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FrequentFlyerSteps" name="And I am a Bronze Frequent Flyer member" time="0.006"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly from Sydney to Melbourne on 10\/10\/2014" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn 439 points" time="0.006"/>
+  <testcase classname="Scenario: Earning standard points from an Economy flight\u002C Normal flights earn 1 point every 2 kilometers" name="Scenario: Earning standard points from an Economy flight\u002C Normal flights earn 1 point every 2 kilometers" time="0.146"/>
+  <testcase classname="earning_points_from_flights.story" name="earning_points_from_flights.story" time="0.149"/>
+  <testcase classname="joe_has_registered.story" name="joe_has_registered.story" time="0.051"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="When Joe logs on with password \&apos;secret\&apos;" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="Then he should be given access to the site" time="0.001"/>
+  <testcase classname="Scenario: Logging on successfully" name="Scenario: Logging on successfully" time="0.016"/>
+  <testcase classname="joe_has_registered.story\u200B" name="joe_has_registered.story\u200B" time="0.049"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="When Joe logs on with password \&apos;wrong\&apos;" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="Then he should be informed that his password was incorrect" time="0.028">
+    <failure message="expected:&lt;&apos;[expected] message&apos;&gt; but was:&lt;&apos;[wrong] message&apos;&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;&apos;[expected] message&apos;&gt; but was:&lt;&apos;[wrong] message&apos;&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.fest.assertions.ConstructorInvoker.newInstance(ConstructorInvoker.java:36)
+	at org.fest.assertions.ComparisonFailureFactory.newComparisonFailure(ComparisonFailureFactory.java:60)
+	at org.fest.assertions.ComparisonFailureFactory.comparisonFailure(ComparisonFailureFactory.java:46)
+	at org.fest.assertions.Fail.comparisonFailed(Fail.java:83)
+	at org.fest.assertions.Fail.failIfNotEqual(Fail.java:71)
+	at org.fest.assertions.GenericAssert.isEqualTo(GenericAssert.java:217)
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.he_should_be_informed_that_his_password_was_incorrect(LoginSteps.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+</failure>
+    <system-out>Then he should be informed that his password was incorrect (FAILED)
+(org.junit.ComparisonFailure: expected:&lt;&apos;[expected] message&apos;&gt; but was:&lt;&apos;[wrong] message&apos;&gt;)
+</system-out>
+  </testcase>
+  <testcase classname="joe_has_registered.story\u200B\u200B" name="joe_has_registered.story\u200B\u200B" time="0.046"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="Given the account has expired" time="0.005">
+    <error message="Database crashed" type="java.io.IOException">java.io.IOException: Database crashed
+	at com.bddinaction.flyinghigh.jbehave.steps.LoginSteps.the_account_has_expired(LoginSteps.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:569)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:535)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:515)
+	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:479)
+	at org.jbehave.core.embedder.StoryRunner.runStepsWithLifecycle(StoryRunner.java:445)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:220)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:181)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:235)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:207)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+</error>
+    <system-out>Given the account has expired (FAILED)
+(java.io.IOException: Database crashed)
+</system-out>
+  </testcase>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="When Joe logs on with password \&apos;wrong\&apos;\u200B" time="0.01">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="Then he should be informed that his account has expired" time="0.013">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.LoginSteps" name="And he should be invited to renew his account" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;" time="0.007"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly on a flight that is worth &lt;base&gt; base points" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn a status bonus of &lt;bonus&gt;" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should earn &lt;total&gt; points in all" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly on a flight that is worth &lt;base&gt; base points\u200B" time="0.005"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn a status bonus of &lt;bonus&gt;\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should earn &lt;total&gt; points in all\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly on a flight that is worth &lt;base&gt; base points\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn a status bonus of &lt;bonus&gt;\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should earn &lt;total&gt; points in all\u200B\u200B" time="0.005"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly on a flight that is worth &lt;base&gt; base points\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn a status bonus of &lt;bonus&gt;\u200B\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;\u200B\u200B\u200B" time="0.005"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should earn &lt;total&gt; points in all\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B" time="0.005"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly on a flight that is worth &lt;base&gt; base points\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn a status bonus of &lt;bonus&gt;\u200B\u200B\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should have guaranteed minimum earned points per trip of &lt;minimum&gt;\u200B\u200B\u200B\u200B" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And I should earn &lt;total&gt; points in all\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="Scenario: Earning points on flights by Frequent Flyer status" name="Scenario: Earning points on flights by Frequent Flyer status" time="0.015"/>
+  <testcase classname="earning_extra_points_from_status.story" name="earning_extra_points_from_status.story" time="0.019"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps" name="Given Jane has logged on" time="7.059"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps" name="When Jane views the home page" time="0.339"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FeaturedDestinationSteps" name="Then she should see 3 featured destinations" time="0.834"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FeaturedDestinationSteps" name="And the featured destinations should include Singapore costing 900" time="0.469"/>
+  <testcase classname="Scenario: Displaying featured destinations" name="Scenario: Displaying featured destinations" time="0.474"/>
+  <testcase classname="show_featured_destinations.story" name="show_featured_destinations.story" time="1.113"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps" name="Given Jane is a registered Frequent Flyer" time="0.005"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps" name="When Jane authenticates with a valid email address and password" time="3.969"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.UserAuthenticationSteps" name="Then Jane should be given access to her account" time="1.042"/>
+  <testcase classname="Scenario: Successful authentication" name="Scenario: Successful authentication" time="1.047"/>
+  <testcase classname="user_authentication.story" name="user_authentication.story" time="1.694"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="Given I need to know the details of flight number FH-101" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="When I request the details about this flight" time="0.007"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="Then I should receive the following:" time="0"/>
+  <testcase classname="Scenario: Find flight details by flight number" name="Scenario: Find flight details by flight number" time="0.006"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="Given I need to know the details of flight number FH-102" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="When I request the details about this flight\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FlightDetailsSteps" name="Then I should receive the following:\u200B" time="0.003"/>
+  <testcase classname="Scenario: Find international flight details by flight number" name="Scenario: Find international flight details by flight number" time="0.009"/>
+  <testcase classname="displaying_flight_details.story" name="displaying_flight_details.story" time="0.011"/>
+  <testcase classname="[PENDING] Given pending" name="[PENDING] Given pending" time="0.011">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] When pending" name="[PENDING] When pending" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] Then pending" name="[PENDING] Then pending" time="0.013">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Earning points from credit card purchases" name="Scenario: Earning points from credit card purchases" time="0.022"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Given we can earn points with partners" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="And the flying distance between Sydney and Melbourne is 878 km" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.FrequentFlyerSteps" name="And I am a Bronze Frequent Flyer member\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="When I fly from Sydney to Melbourne on 10\/10\/2014\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningPointsFromFlights" name="Then I should earn 439 points\u200B" time="0.003"/>
+  <testcase classname="Scenario: Earning points from purchases with partners" name="Scenario: Earning points from purchases with partners" time="0.009"/>
+  <testcase classname="earning_points_from_purchases.story" name="earning_points_from_purchases.story" time="0.012"/>
+  <testcase classname="[PENDING] Given pending\u200B" name="[PENDING] Given pending\u200B" time="0.018">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] When pending\u200B" name="[PENDING] When pending\u200B" time="0.019">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] Then pending\u200B" name="[PENDING] Then pending\u200B" time="0.019">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Earning points from partner promotions" name="Scenario: Earning points from partner promotions" time="0.027"/>
+  <testcase classname="[PENDING] Given pending\u200B\u200B" name="[PENDING] Given pending\u200B\u200B" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] When pending\u200B\u200B" name="[PENDING] When pending\u200B\u200B" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] Then pending\u200B\u200B" name="[PENDING] Then pending\u200B\u200B" time="0.016">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Earning points from hotel packages" name="Scenario: Earning points from hotel packages" time="0.022"/>
+  <testcase classname="[PENDING] Given pending\u200B\u200B\u200B" name="[PENDING] Given pending\u200B\u200B\u200B" time="0.019">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] When pending\u200B\u200B\u200B" name="[PENDING] When pending\u200B\u200B\u200B" time="0.02">
+    <skipped/>
+  </testcase>
+  <testcase classname="[PENDING] Then pending\u200B\u200B\u200B" name="[PENDING] Then pending\u200B\u200B\u200B" time="0.021">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Earning points from car rental packages" name="Scenario: Earning points from car rental packages" time="0.028"/>
+  <testcase classname="earning_points_from_special_offers.story" name="earning_points_from_special_offers.story" time="0.031"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given Jill Smith is not a Frequent Flyer member" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When she registers on the Frequent Flyer program" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then she should have a status of Bronze" time="0.003"/>
+  <testcase classname="Scenario: New members should start out as Bronze members" name="Scenario: New members should start out as Bronze members" time="0.01"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B" time="0.004"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B\u200B" time="0.003"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B\u200B\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Given a member has a status of &lt;initialStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="And he has &lt;initialStatusPoints&gt; status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.001"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="When he earns &lt;extraPoints&gt; extra status points\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.EarningStatus" name="Then he should have a status of &lt;finalStatus&gt;\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B" time="0.002"/>
+  <testcase classname="Scenario: Members should get status updates based on status points earned" name="Scenario: Members should get status updates based on status points earned" time="0.009"/>
+  <testcase classname="calculating_status_based_on_points.story" name="calculating_status_based_on_points.story" time="0.01"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="Given I want to book a flight" time="3.197"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="When I search for return flights from Sydney to London in Business" time="1.448"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="Then I should see the list of all available flights" time="0.186"/>
+  <testcase classname="Scenario: Viewing available flights" name="Scenario: Viewing available flights" time="0.19"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="Given I want to book a flight\u200B" time="0.823"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="When I enter \&apos;Se\&apos; into the \&apos;from\&apos; city field" time="0.255"/>
+  <testcase classname="com.bddinaction.flyinghigh.jbehave.steps.BookingAFlightSteps" name="Then I should see the following cities: Seattle\u002C Seoul" time="0.338"/>
+  <testcase classname="Scenario: Filtering cities" name="Scenario: Filtering cities" time="0.345"/>
+  <testcase classname="booking_a_flight.story" name="booking_a_flight.story" time="1.02"/>
+  <testcase classname="java.lang.Object" name="AfterStories" time="1.12"/>
+</testsuite>

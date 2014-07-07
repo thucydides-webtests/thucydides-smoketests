@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Show featured destinations","Displaying featured destinations","ERROR","2014-06-29T03:04:54.863Z","0.0","52.64"
+"Booking flights","Filter flights by city before booking","ERROR","2014-06-29T03:08:21.462Z","0.0","45.88"
+"Logging on","Logging on with an expired account","ERROR","2014-06-29T03:04:54.630Z","0.0","0.06"
+"User authentication","Successful authentication","ERROR","2014-06-29T03:06:35.847Z","0.0","45.76"
+"Booking flights","View all available flights before booking","ERROR","2014-06-29T03:07:32.898Z","0.0","45.94"
+"Show featured destinations","Viewing available flights","ERROR","2014-06-29T03:05:50.013Z","0.0","45.82"
