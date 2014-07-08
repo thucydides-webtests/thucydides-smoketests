@@ -46,16 +46,6 @@ public class WhenDisplayingMoreFlightDetails {
         //Assume.assumeTrue("Favorite destinations service is ready", false);
     }
 
-    /*Scenario: View all available flights before booking
-Given I want to book a flight
-When I search for return flights from Sydney to London in Business
-Then I should see the list of all available flights
-
-Scenario: Filter flights by city before booking
-Given I want to book a flight
-When I enter 'Se' into the 'from' city field
-Then I should see the following cities: Seattle, Seoul
-    */
     @Test
     public void display_flight_for_all_available_flights() {
         registeredMember.navigateToFlightBookings();
