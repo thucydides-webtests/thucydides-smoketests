@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Displaying flight details","Display flight details by flight number","SUCCESS","2014-06-29T03:07:21.619Z","0.0","0.02"
-"Displaying flight details","Display international flight details by flight number","SUCCESS","2014-06-29T03:07:24.400Z","0.0","0.02"
-"Booking flights","Filter flights by city before booking","ERROR","2014-06-29T03:08:21.462Z","0.0","45.88"
-"Booking flights","View all available flights before booking","ERROR","2014-06-29T03:07:32.898Z","0.0","45.94"
