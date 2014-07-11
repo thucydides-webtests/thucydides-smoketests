@@ -10,5 +10,5 @@ appender("STDOUT", ConsoleAppender) {
 }
 
 root(WARN, ["STDOUT"])
-logger("net.thucydides", WARN)
+logger("net.thucydides", DEBUG)
 logger("org.hibernate", WARN, ["STDOUT"])

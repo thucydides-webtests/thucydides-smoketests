@@ -8,6 +8,7 @@ import com.google.common.collect.ImmutableList;
 import net.thucydides.core.annotations.*;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
+import org.junit.Assume;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.theories.suppliers.TestedOn;
@@ -43,7 +44,7 @@ public class WhenDisplayingMoreFlightDetails {
 
     @Test
     public void display_flight_durations() {
-        //Assume.assumeTrue("Favorite destinations service is ready", false);
+        Assume.assumeTrue("Favorite destinations service is ready", false);
     }
 
     @Test
