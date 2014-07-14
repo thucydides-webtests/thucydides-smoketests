@@ -198,7 +198,7 @@
                 <dependency>
                     <groupId>net.thucydides.plugins.jira</groupId>
                     <artifactId>thucydides-jira-requirements-provider</artifactId>
-                    <version>0.9.263-SNAPSHOT</version>
+                    <version>0.9.262</version>
                 </dependency>
             </dependencies>
             <build>
@@ -220,12 +220,12 @@
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
                                 <artifactId>thucydides-jira-plugin</artifactId>
-                                <version>0.9.262-SNAPSHOT</version>
+                                <version>0.9.262</version>
                             </dependency>
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
                                 <artifactId>thucydides-jira-requirements-provider</artifactId>
-                                <version>0.9.263-SNAPSHOT</version>
+                                <version>0.9.262</version>
                             </dependency>
                         </dependencies>
                     </plugin>
@@ -245,7 +245,7 @@
                 <dependency>
                     <groupId>net.thucydides.plugins.jira</groupId>
                     <artifactId>thucydides-jira-plugin</artifactId>
-                    <version>0.9.262-SNAPSHOT</version>
+                    <version>0.9.262</version>
                 </dependency>
                 <dependency>
                     <groupId>net.thucydides.plugins.jira</groupId>
@@ -272,7 +272,7 @@
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
                                 <artifactId>thucydides-jira-plugin</artifactId>
-                                <version>0.9.262-SNAPSHOT</version>
+                                <version>0.9.262</version>
                             </dependency>
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
@@ -291,7 +291,7 @@
             </activation>
             <properties>
                 <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
-                <thucydides.jbehave.version>0.9.260</thucydides.jbehave.version>
+                <thucydides.jbehave.version>0.9.262</thucydides.jbehave.version>
             </properties>
             <build>
                 <plugins>
