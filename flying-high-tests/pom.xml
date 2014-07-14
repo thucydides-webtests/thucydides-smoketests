@@ -80,17 +80,6 @@
             <artifactId>mockito-all</artifactId>
             <version>1.9.5</version>
         </dependency>
-
-        <dependency>
-            <groupId>net.thucydides.plugins.jira</groupId>
-            <artifactId>thucydides-jira-plugin</artifactId>
-            <version>0.9.257-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>net.thucydides.plugins.jira</groupId>
-            <artifactId>thucydides-jira-requirements-provider</artifactId>
-            <version>0.9.257-SNAPSHOT</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -167,18 +156,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.thucydides.plugins.jira</groupId>
-                        <artifactId>thucydides-jira-plugin</artifactId>
-                        <version>0.9.260</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>net.thucydides.plugins.jira</groupId>
-                        <artifactId>thucydides-jira-requirements-provider</artifactId>
-                        <version>0.9.260-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>net.thucydides.maven.plugins</groupId>
@@ -191,8 +168,8 @@
         <profile>
             <id>stable-version</id>
             <properties>
-                <thucydides.version>0.9.256</thucydides.version>
-                <thucydides.jbehave.version>0.9.256</thucydides.jbehave.version>
+                <thucydides.version>0.9.262</thucydides.version>
+                <thucydides.jbehave.version>0.9.262</thucydides.jbehave.version>
             </properties>
         </profile>
         <profile>
@@ -209,19 +186,19 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <thucydides.version>0.9.260</thucydides.version>
-                <thucydides.jbehave.version>0.9.260</thucydides.jbehave.version>
+                <thucydides.version>0.9.262</thucydides.version>
+                <thucydides.jbehave.version>0.9.262</thucydides.jbehave.version>
             </properties>
             <dependencies>
                 <dependency>
                     <groupId>net.thucydides.plugins.jira</groupId>
                     <artifactId>thucydides-jira-plugin</artifactId>
-                    <version>0.9.260</version>
+                    <version>0.9.262</version>
                 </dependency>
                 <dependency>
                     <groupId>net.thucydides.plugins.jira</groupId>
                     <artifactId>thucydides-jira-requirements-provider</artifactId>
-                    <version>0.9.260-SNAPSHOT</version>
+                    <version>0.9.263-SNAPSHOT</version>
                 </dependency>
             </dependencies>
             <build>
@@ -243,12 +220,64 @@
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
                                 <artifactId>thucydides-jira-plugin</artifactId>
-                                <version>0.9.260</version>
+                                <version>0.9.262-SNAPSHOT</version>
                             </dependency>
                             <dependency>
                                 <groupId>net.thucydides.plugins.jira</groupId>
                                 <artifactId>thucydides-jira-requirements-provider</artifactId>
-                                <version>0.9.260-SNAPSHOT</version>
+                                <version>0.9.263-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>jira-customfields</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
+                <thucydides.jbehave.version>0.9.260</thucydides.jbehave.version>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>net.thucydides.plugins.jira</groupId>
+                    <artifactId>thucydides-jira-plugin</artifactId>
+                    <version>0.9.262-SNAPSHOT</version>
+                </dependency>
+                <dependency>
+                    <groupId>net.thucydides.plugins.jira</groupId>
+                    <artifactId>thucydides-jira-customfields-requirements-provider</artifactId>
+                    <version>0.9.260</version>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.thucydides.maven.plugins</groupId>
+                        <artifactId>maven-thucydides-plugin</artifactId>
+                        <version>${thucydides.version}</version>
+                        <executions>
+                            <execution>
+                                <id>thucydides-reports</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>aggregate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>net.thucydides.plugins.jira</groupId>
+                                <artifactId>thucydides-jira-plugin</artifactId>
+                                <version>0.9.262-SNAPSHOT</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>net.thucydides.plugins.jira</groupId>
+                                <artifactId>thucydides-jira-customfields-requirements-provider</artifactId>
+                                <version>0.9.260</version>
                             </dependency>
                         </dependencies>
                     </plugin>
@@ -261,7 +290,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <thucydides.version>0.9.260</thucydides.version>
+                <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
                 <thucydides.jbehave.version>0.9.260</thucydides.jbehave.version>
             </properties>
             <build>

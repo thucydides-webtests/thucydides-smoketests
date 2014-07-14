@@ -2,6 +2,7 @@ package com.bddinaction.flyinghigh.jbehave.pages;
 
 import com.google.common.base.Function;
 import net.thucydides.core.annotations.At;
+import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.WebElementState;
 import org.joda.time.DateTime;
@@ -18,7 +19,6 @@ import java.util.List;
 import static ch.lambdaj.Lambda.extract;
 import static ch.lambdaj.Lambda.on;
 
-@At("http://#HOST/#/books")
 public class BookingPage extends PageObject {
 
     @FindBy(id = "welcome-message")
@@ -96,6 +96,7 @@ public class BookingPage extends PageObject {
     }
 
     public List<String> getFromTypeaheads() {
+        waitForRenderedElementsToBePresent(By.cssSelector(".typeahead"));
         List<String> menuEntries = new ArrayList<String>();
         for(WebElement menuEntry : $("#main-navbar").thenFindAll("li")) {
             menuEntries.add(menuEntry.getText());
@@ -126,6 +127,10 @@ public class BookingPage extends PageObject {
 
     public void search() {
         search.click();
+    }
+
+    public void waitUntilDisplayed() {
+        waitForPresenceOf("#book");
     }
 }
 

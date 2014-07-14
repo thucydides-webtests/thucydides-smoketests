@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 @RunWith(ThucydidesRunner.class)
-@Story(Application.ViewingFlights.displaying_flight_details.class)
+//@Story(Application.ViewingFlights.displaying_flight_details.class)
 @Issue("FH-18")
 public class WhenViewingFeaturedDestinations {
 

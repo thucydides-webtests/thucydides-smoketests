@@ -46,6 +46,7 @@ public class BookingAFlightSteps {
     @When("I search for $flightType flights from $from to $to in $travelClass")
     public void whenISearchForFlights(String flightType, String from,
                                       String to, String travelClass) {
+
         traveller.searchForFlights(flightType, from, to, travelClass);
     }
 

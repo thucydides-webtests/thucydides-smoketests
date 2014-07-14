@@ -5,7 +5,9 @@ import com.bddinaction.flyinghigh.jbehave.pages.HomePage;
 import com.bddinaction.flyinghigh.jbehave.pages.LoginPage;
 import net.thucydides.core.annotations.Step;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 public class AuthenticationFlowSteps {
 
@@ -21,6 +23,11 @@ public class AuthenticationFlowSteps {
     @Step
     public void verifyWelcomeMessageFor(FrequentFlyerMember user) {
         String welcomeMessage = homePage.getWelcomeMessage();
-        assertThat(welcomeMessage).isEqualTo("Welcome " + user.getFirstName());
+        assertThat(welcomeMessage, is(equalTo("Welcome " + user.getFirstName())));
+    }
+
+    @Step
+    public void shouldSeeErrorMessage(String expectedMessage) {
+        assertThat("wrong message", is(equalTo(expectedMessage)));
     }
 }

@@ -3,15 +3,15 @@ package com.bddinaction.flyinghigh.jbehave.pages;
 import com.bddinaction.flyinghigh.jbehave.pages.components.MainMenu;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.Keys;
+import net.thucydides.core.pages.WebElementFacade;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("http://localhost:8080/#/welcome")
 public class LoginPage extends PageObject {
 
-    private WebElement email;
-    private WebElement password;
+    private WebElementFacade email;
+    private WebElementFacade password;
 
     @FindBy(css = ".btn[value='Sign in']")
     private WebElement signin;
@@ -22,6 +22,7 @@ public class LoginPage extends PageObject {
         email.sendKeys(userEmail);
         password.sendKeys(userPassword);
         signin.click();
+        waitForTextToAppear("Flying High Frequent Flyers");
     }
 
     public MainMenu inMainMenu() {

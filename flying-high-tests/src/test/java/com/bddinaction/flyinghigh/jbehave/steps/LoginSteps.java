@@ -1,6 +1,8 @@
 package com.bddinaction.flyinghigh.jbehave.steps;
 
 
+import com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps;
+import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -19,6 +21,9 @@ import static org.fest.assertions.Assertions.assertThat;
  */
 public class LoginSteps {
 
+    @Steps
+    TravellerFlowSteps traveller;
+
     @Given("$username has registered online with a password of '$password'")
     public void registered_online_with_a_password_of_secret(String username, String password) throws Throwable {
     }
@@ -34,7 +39,8 @@ public class LoginSteps {
 
     @Then("he should be informed that his password was incorrect")
     public void he_should_be_informed_that_his_password_was_incorrect() {
-        assertThat("wrong message").isEqualTo("expected message");
+        traveller.shouldSeeErrorMessage("expected message");
+
     }
 
     @Given("the account has expired")

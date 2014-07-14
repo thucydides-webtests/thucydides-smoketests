@@ -11,6 +11,7 @@
     "karma": "*",
     "karma-junit-reporter": "*",
     "karma-jasmine": "*",
-    "karma-ng-scenario": "*"
+    "karma-ng-scenario": "*",
+    "concat": "~1.0.0"
   }
 }

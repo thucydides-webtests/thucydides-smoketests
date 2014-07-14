@@ -14,7 +14,6 @@ Given the following flight timetable:
 | FH-101 | Syndey    | London      | 23:50 |
 | FH-102 | Syndey    | London      | 10:30 |
 | FH-101 | Syndey    | Paris       | 13:50 |
-I want to book a flight
 When I search for return flights from Sydney to London in Business
 Then I should see the following flights:
 | number | departure | destination | time  |

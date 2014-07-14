@@ -20,15 +20,13 @@ public class HomePage extends PageObject {
     @FindBy(id = "welcome-message")
     private WebElementFacade welcomeMessage;
 
-    @FindBy(css = ".featured .featured-destination")
-    private List<WebElement> featuredDestinations;
-
     public String getWelcomeMessage() {
         return welcomeMessage.getText();
     }
 
     public List<DestinationDeal> getFeaturedDestinations() {
         List<DestinationDeal> deals = Lists.newArrayList();
+        List<WebElementFacade> featuredDestinations = findAll(".featured .featured-destination");
         for (WebElement destinationEntry : featuredDestinations) {
             deals.add(destinationDealFrom(destinationEntry));
         }
