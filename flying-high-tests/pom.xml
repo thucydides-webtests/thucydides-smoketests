@@ -108,7 +108,7 @@
                         <include>**/When*.java</include>
                         <include>**/*TestSuite.java</include>
                     </includes>
-                    <disableXmlReport>true</disableXmlReport>
+                    <useFile>false</useFile>
                     <systemPropertyVariables>
                         <metafilter>${metafilter}</metafilter>
                     </systemPropertyVariables>
