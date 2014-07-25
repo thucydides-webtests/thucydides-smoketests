@@ -178,8 +178,8 @@
         <profile>
             <id>stable-version</id>
             <properties>
-                <thucydides.version>0.9.262</thucydides.version>
-                <thucydides.jbehave.version>0.9.262</thucydides.jbehave.version>
+                <thucydides.version>0.9.264</thucydides.version>
+                <thucydides.jbehave.version>0.9.264</thucydides.jbehave.version>
             </properties>
         </profile>
         <profile>
