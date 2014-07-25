@@ -183,14 +183,6 @@
             </properties>
         </profile>
         <profile>
-            <id>snapshot</id>
-            <properties>
-                <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
-                <thucydides.jbehave.version>0.9.x-SNAPSHOT</thucydides.jbehave.version>
-            </properties>
-        </profile>
-
-        <profile>
             <id>jira</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
