@@ -93,14 +93,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.11</version>
+                <version>2.17</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.11</version>
+                <version>2.17</version>
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
@@ -109,7 +109,6 @@
                         <include>**/*TestSuite.java</include>
                     </includes>
                     <disableXmlReport>true</disableXmlReport>
-                    <useFile>false</useFile>
                     <systemPropertyVariables>
                         <metafilter>${metafilter}</metafilter>
                     </systemPropertyVariables>
