@@ -248,8 +248,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
-                <thucydides.jbehave.version>0.9.260</thucydides.jbehave.version>
+                <thucydides.version>0.9.264</thucydides.version>
+                <thucydides.jbehave.version>0.9.264</thucydides.jbehave.version>
             </properties>
             <dependencies>
                 <dependency>
@@ -300,8 +300,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <thucydides.version>0.9.x-SNAPSHOT</thucydides.version>
-                <thucydides.jbehave.version>0.9.262</thucydides.jbehave.version>
+                <thucydides.version>0.9.264</thucydides.version>
+                <thucydides.jbehave.version>0.9.264</thucydides.jbehave.version>
             </properties>
             <build>
                 <plugins>
