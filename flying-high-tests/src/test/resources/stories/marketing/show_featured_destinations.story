@@ -8,6 +8,7 @@ I want to show travellers exciting destinations when they log on
 Meta:
 @tag component:ui
 @issue FH-21
+@capability marketing
 
 Scenario: Displaying featured destinations
 Given Jane has logged on

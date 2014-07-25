@@ -1,6 +1,7 @@
 Meta:
 @tag component:ui
 @issue FH-18
+@capability booking
 
 Scenario: Display flight details by flight number
 Given I need to know the details of flight number FH-101

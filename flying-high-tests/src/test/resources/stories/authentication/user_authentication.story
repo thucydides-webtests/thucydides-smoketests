@@ -8,6 +8,7 @@ I want users to authenticate before they can access their account
 Meta:
 @tag component:ui
 @issue FH-7
+@capability authentication
 
 Scenario: Successful authentication
 Given Jane is a registered Frequent Flyer

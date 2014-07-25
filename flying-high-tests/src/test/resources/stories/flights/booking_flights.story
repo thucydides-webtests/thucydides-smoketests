@@ -6,6 +6,7 @@ I want to be able to book a flight online
 Meta:
 @tag component:ui
 @issue FH-15
+@capability booking
 
 Scenario: View all available flights before booking
 Given the following flight timetable:

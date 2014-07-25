@@ -3,6 +3,7 @@ Logging on to the 'Flying High' admin site
 Meta:
 @tag component:ui
 @issue FH-22
+@capability authentication
 
 Scenario: Logging on successfully
 Given Joe is a Marketing Admin

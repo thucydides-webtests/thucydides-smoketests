@@ -4,6 +4,7 @@ Meta:
 @earning-points
 @tag component:backend
 @issue FH-10
+@capability earning_points
 
 Narrative:
 In order to encourage travellers to book with Flying High Airlines more frequently

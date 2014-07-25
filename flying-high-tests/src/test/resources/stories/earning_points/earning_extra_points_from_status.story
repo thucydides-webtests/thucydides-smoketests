@@ -3,6 +3,7 @@ Earning extra points from Frequent Flyer status
 Meta:
 @issue FH-12
 @tag component:backend
+@capability earning_points
 
 Narrative:
 In order to encourage travellers to book with Flying High Airlines more frequently

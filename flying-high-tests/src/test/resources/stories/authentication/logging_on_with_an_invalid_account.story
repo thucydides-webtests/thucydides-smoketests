@@ -5,6 +5,7 @@ Meta:
 @tag component:ui
 @issue FH-7
 @expectedfailure
+@capability authentication
 
 Narrative:
 Given Joe is a Frequent Flyer member
