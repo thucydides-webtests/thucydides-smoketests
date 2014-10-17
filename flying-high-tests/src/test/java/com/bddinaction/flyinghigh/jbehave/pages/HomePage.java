@@ -1,19 +1,13 @@
 package com.bddinaction.flyinghigh.jbehave.pages;
 
 import com.bddinaction.flyinghigh.jbehave.model.DestinationDeal;
-import com.beust.jcommander.internal.Lists;
-import com.google.common.base.Function;
-import net.thucydides.core.annotations.findby.By;
+import com.google.common.collect.Lists;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.WebElementFacade;
-import net.thucydides.core.pages.WebElementState;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class HomePage extends PageObject {
 

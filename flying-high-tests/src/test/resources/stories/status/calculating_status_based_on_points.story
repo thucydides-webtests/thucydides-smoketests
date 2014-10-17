@@ -3,7 +3,6 @@ Frequent Flyer status is calculated based on points
 Meta:
 @tag component:ui
 @issue FH-17
-
 Scenario: New members should start out as Bronze members
 Given Jill Smith is not a Frequent Flyer member
 When she registers on the Frequent Flyer program

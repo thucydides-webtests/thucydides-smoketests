@@ -4,6 +4,7 @@ package com.bddinaction.flyinghigh.jbehave.steps;
 import com.bddinaction.flyinghigh.jbehave.flowsteps.TravellerFlowSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Pending;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import org.junit.BeforeClass;
@@ -56,5 +57,18 @@ public class LoginSteps {
     public void he_should_be_invited_to_renew_his_account() {
     }
 
+    @Given("$username has registered online via Facebook")
+    public void has_registered_via_facebook(String username) {
+    }
+
+    @When("$username logs on with a Facebook token")
+    public void logs_in_via_facebook(String username) {}
+
+    @Given("$username has registered online via GMail")
+    public void has_registered_via_gmail(String username) {
+    }
+
+    @When("$username logs on with a GMail token")
+    public void logs_in_via_gmail(String username) {}
 
 }

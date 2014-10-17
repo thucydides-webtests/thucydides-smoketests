@@ -47,10 +47,6 @@ public class FrequentFlyer {
         return lastName;
     }
 
-    public static FrequentFlyerBuilder withFrequentFlyerNumber(String frequentFlyerNumber) {
-        return new FrequentFlyerBuilder(frequentFlyerNumber);
-    }
-
     public Status getStatus() {
         return status;
     }
@@ -77,6 +73,11 @@ public class FrequentFlyer {
 
     public List<Status> getUnachievedStatuses() {
         return ImmutableList.of(Status.Gold, Status.Platinum);
+    }
+
+
+    public static FrequentFlyerBuilder withFrequentFlyerNumber(String frequentFlyerNumber) {
+        return new FrequentFlyerBuilder(frequentFlyerNumber);
     }
 
     public static class FrequentFlyerBuilder {

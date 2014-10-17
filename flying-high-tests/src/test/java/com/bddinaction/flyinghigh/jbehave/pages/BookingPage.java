@@ -1,8 +1,6 @@
 package com.bddinaction.flyinghigh.jbehave.pages;
 
 import com.google.common.base.Function;
-import net.thucydides.core.annotations.At;
-import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.WebElementState;
 import org.joda.time.DateTime;

@@ -46,4 +46,9 @@ public class TravellerFlowSteps extends AuthenticationFlowSteps {
     public List<String> getProposedDepartureCities() {
         return bookingPage.getFromTypeaheads();
     }
+
+    @Step
+    public void registerViaFacebook() {
+
+    }
 }
