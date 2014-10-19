@@ -188,9 +188,6 @@
 
         <profile>
             <id>jira</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <thucydides.version>0.9.274-SNAPSHOT</thucydides.version>
                 <thucydides.jbehave.version>0.9.273</thucydides.jbehave.version>
@@ -240,9 +237,6 @@
         </profile>
         <profile>
             <id>jira-customfields</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <thucydides.version>0.9.273</thucydides.version>
                 <thucydides.jbehave.version>0.9.273</thucydides.jbehave.version>
